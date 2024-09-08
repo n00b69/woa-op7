@@ -1,11 +1,11 @@
-<img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
+<img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the Xiaomi Mi 8
+# Running Windows on the OnePlus 7 Pro / 7T Pro
 
 ## Dualboot guide
 
 ### Prerequisites
-- [UEFI image](https://github.com/n00b69/woa-dipper/releases/tag/UEFI)
+- [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
 - [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
 
