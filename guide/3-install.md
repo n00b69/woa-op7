@@ -1,29 +1,20 @@
-<img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
+<img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the Xiaomi Mi 8
+# Running Windows on the OnePlus 7 Pro / 7T Pro
 
 ## Installing Windows
 
 ### Prerequisites
-- [UEFI image](https://github.com/n00b69/woa-dipper/releases/tag/UEFI)
+- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/tag/TWRP)
 
 - [Windows on ARM image](https://arkt-7.github.io/woawin/)
   
-- [Drivers](https://github.com/n00b69/woa-dipper/releases/tag/Drivers)
+- [Drivers](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
-- [Devcfg (touch fix)](https://github.com/n00b69/woa-dipper/releases/download/Files/devcfg-dipper.img)
+- [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
 ### Boot into the UEFI
-> Replace `path\to\dipper-uefi.img` with the actual path of the UEFI image
-```cmd
-fastboot boot path\to\dipper-uefi.img
-```
 
-#### Enabling mass storage mode
-> Once booted into the UEFI, use the volume buttons to navigate the menu and the power button to confirm
-- Select **UEFI Boot Menu**.
-- Select **USB Attached SCSI (UAS) Storage**.
-- Press the **power** button twice to confirm.
 
 ### Diskpart
 > [!WARNING]
@@ -33,7 +24,7 @@ diskpart
 ```
 
 #### Select the Windows volume of the phone
-> Use `list volume` to find it, replace `$` with the actual number of **WINDIPPER**
+> Use `list volume` to find it, replace `$` with the actual number of **WINOP7**
 ```diskpart
 select volume $
 ``` 
@@ -44,7 +35,7 @@ assign letter x
 ``` 
 
 #### Select the ESP volume of the phone
-> Use `list volume` to find it, replace `$` with the actual number of **ESPDIPPER**
+> Use `list volume` to find it, replace `$` with the actual number of **ESPOP7**
 ```diskpart
 select volume $
 ``` 
@@ -72,32 +63,17 @@ dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
 > If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:path\to\install.esd`, then replace `index:6` with the actual index number of **Windows 11 Pro** in your image
 
 ### Copying your boot.img into Windows
-- Drag and drop the **rooted_boot.img** from the **platform-tools** folder into the **WINDIPPER** disk in Windows Explorer, then rename it to **boot.img**.
+- Drag and drop the **rooted_boot.img** from the **platform-tools** folder into the **WINOP7** disk in Windows Explorer, then rename it to **boot.img**.
 
 ### Installing Drivers
-- Unpack the driver archive, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
+- Download and unpack the driver archive for your device, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
 
-> If it asks you to enter a letter, enter the drive letter of **WINDIPPER** (which should be **X**), then press enter
+> If it asks you to enter a letter, enter the drive letter of **WINOP7** (which should be **X**), then press enter
   
 #### Create Windows bootloader files
-> If any error shows up, such as "Failure when initializing library system volume.", open `diskpart` again and assign any new letter to **ESPDIPPER**, then replace the letter `Y` in the next commands with the letter that you just added.
+> If any error shows up, such as "Failure when initializing library system volume.", open `diskpart` again and assign any new letter to **ESPOP7**, then replace the letter `Y` in the next command with the letter that you just added.
 ```cmd
 bcdboot X:\Windows /s Y: /f UEFI
-```
-
-#### Enabling test signing
-```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" testsigning on
-```
-
-#### Disabling recovery
-```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
-```
-
-#### Disabling integrity checks
-```cmd
-bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ```
 
 #### Remove the drive letter for ESP
@@ -109,16 +85,11 @@ mountvol y: /d
 ### Reboot to fastboot
 > Hold **volume down** + **power** to force reboot your phone into fastboot mode
 
-### Fixing touch
-> Replace `path\to\devcfg-dipper.img` with the actual path to the image
-```cmd
-fastboot flash devcfg_ab path\to\devcfg-dipper.img
-```
 
 #### Boot into the UEFI
-> Replace `path\to\dipper-uefi.img` with the actual path of the UEFI image
+> Download the UEFI image for your device, then replace `path\to\devicename-uefi.img` with the actual path of the UEFI image
 ```cmd
-fastboot boot path\to\dipper-uefi.img
+fastboot boot path\to\devicename-uefi.img
 ```
 
 ### Reboot to Android
