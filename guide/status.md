@@ -20,7 +20,7 @@
 - [x] Display Port ```Theoretically works, needs testing```
 - [x] Touchscreen 
 - [x] UFS
-- [x] USB ```Need on USB Host Mode```
+- [x] USB
 - [x] Wi-Fi
 
 #### Sensors
@@ -30,4 +30,4 @@
 - [ ] Gyroscope
 - [ ] Light sensor
 - [ ] Proximity
-- [X] NFC ```NFC Tags work, other NFC related things may work too```
+- [X] NFC ```Omly guacamole```
