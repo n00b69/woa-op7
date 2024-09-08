@@ -30,4 +30,4 @@
 - [ ] Gyroscope
 - [ ] Light sensor
 - [ ] Proximity
-- [X] NFC ```Omly guacamole```
+- [X] NFC ```Only guacamole```
