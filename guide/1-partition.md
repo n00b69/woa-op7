@@ -97,9 +97,9 @@ mkpart esp fat32 32GB 32.3GB
 #### Creating Windows partition
 > Replace **32.3GB** with the end value of **esp**
 >
-> Replace **123GB** with the end value of your disk, use `p free` to find it
+> Replace **idkGB** with the end value of your disk, use `p free` to find it
 ```cmd
-mkpart win ntfs 32.3GB 123GB
+mkpart win ntfs 32.3GB idkGB
 ```
 
 #### Making ESP bootable
