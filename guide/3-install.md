@@ -5,7 +5,7 @@
 ## Installing Windows
 
 ### Prerequisites
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/tag/TWRP)
+- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
 - [Windows on ARM image](https://arkt-7.github.io/woawin/)
   
