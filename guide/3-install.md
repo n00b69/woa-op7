@@ -90,8 +90,9 @@ mountvol y: /d
 ```
 
 ### Reboot to fastboot
-> Hold **volume down** + **power** to force reboot your phone into fastboot mode
-
+```cmd
+adb reboot bootloader
+```
 
 #### Boot into the UEFI
 > Download the UEFI image for your device, then replace `path\to\devicename-uefi.img` with the actual path of the UEFI image
