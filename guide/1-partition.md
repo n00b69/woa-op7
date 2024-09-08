@@ -73,17 +73,17 @@ print
 ```
 
 #### Removing userdata
-> Replace **$** with the number of the **userdata** partition, which should be **idk**
+> Replace **$** with the number of the **userdata** partition, which should be **19**
 ```cmd
 rm $
 ```
 
 #### Recreating userdata
-> Replace **1611MB** with the former start value of **userdata** which we just deleted
+> Replace **7971MB** with the former start value of **userdata** which we just deleted
 >
-> Replace **32GB** with the end value you want **userdata** to have
+> Replace **32GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 32GB-7971MB = 24GB
 ```cmd
-mkpart userdata ext4 1611MB 32GB
+mkpart userdata ext4 7971MB 32GB
 ```
 
 #### Creating ESP partition
@@ -97,13 +97,13 @@ mkpart esp fat32 32GB 32.3GB
 #### Creating Windows partition
 > Replace **32.3GB** with the end value of **esp**
 >
-> Replace **idkGB** with the end value of your disk, use `p free` to find it
+> Replace **124GB** with the end value of your disk, use `p free` to find it
 ```cmd
-mkpart win ntfs 32.3GB idkGB
+mkpart win ntfs 32.3GB 124GB
 ```
 
 #### Making ESP bootable
-> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 22
+> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be 20
 ```cmd
 set $ esp on
 ```
