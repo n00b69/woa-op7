@@ -13,8 +13,18 @@
 
 - [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
-### Boot into the UEFI
+### Boot modified TWRP recovery
+> Replace `path\to\moddedtwrp.img` with the actual path of the image
+```cmd
+fastboot boot path\to\moddedtwrp
+img
+```
 
+### Entering mass storage mode
+> If it asks you to run it again, do so
+```cmd
+adb shell msc
+```
 
 ### Diskpart
 > [!WARNING]
