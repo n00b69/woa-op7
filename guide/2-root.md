@@ -1,6 +1,6 @@
-<img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
+<img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the Xiaomi Mi 8
+# Running Windows on the OnePlus 7 Pro / 7T Pro
 
 ## Rooting your device
 
@@ -27,7 +27,7 @@ adb reboot bootloader
 #### Flashing your rooted boot image
 > Replace `path\to\magisk_patched.img` with the actual path of the image
 ```cmd
-fastboot flash boot path\to\magisk_patched.img
+fastboot flash boot_a path\to\magisk_patched.img
 ```
 
 ### Reboot to Android
@@ -44,7 +44,7 @@ fastboot reboot
 
 - A superuser request for Shell might appear on your phone's screen. If it does, grant it access.
 ```cmd
-adb shell "su -c cp /dev/block/by-name/boot /sdcard/rooted_boot.img" & adb pull /sdcard/rooted_boot.img
+adb shell "su -c cp /dev/block/by-name/boot_a /sdcard/rooted_boot.img" & adb pull /sdcard/rooted_boot.img
 ```
 
 ## [Next step: Installing Windows](3-install.md)
