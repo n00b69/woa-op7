@@ -1,10 +1,8 @@
-<img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
+<img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the Xiaomi Mi 8
-[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/woadipper)
+# Running Windows on the OnePlus 7 Pro / 7T Pro
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/woahelperchat)
 
-## Choose your language
-**English** | [`Pусский`](/guide/Russian/README-ru.md) | [`Polski`](guide/Polski/README-pl.md) | ~~[`Türkçe`](/guide/Turkish/README-tr.md)~~
 
 ## ⚠️ Warning
 We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline ~~workers~~ cowboys, dead pmics, dead ram, dead sim cards, dead display ics, dead cpus, any xiaomi shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
@@ -31,7 +29,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Reinstall instructions](guide/reinstall.md)
 
-- [Uninstall instructions](guide/uninstall.md)
+- ~~[Uninstall instructions](guide/uninstall.md)~~
 
 
 ## Contributors
