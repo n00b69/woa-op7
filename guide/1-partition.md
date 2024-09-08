@@ -1,6 +1,6 @@
-<img align="right" src="https://github.com/n00b69/woa-dipper/blob/main/dipper.png" width="350" alt="Windows 11 running on dipper">
+<img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the Xiaomi Mi 8
+# Running Windows on the OnePlus 7 Pro / 7T Pro
 
 ## Partitioning your device
 
@@ -9,14 +9,12 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [TWRP](https://github.com/n00b69/woa-dipper/releases/download/Files/twrp.img)
-
-- [Parted](https://github.com/n00b69/woa-dipper/releases/download/Files/parted)
+- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/twrp.img)
 
 ### Notes
 > [!WARNING]  
 > 
-> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/woadipper).
+> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/woahelperchat).
 > 
 > Do not run all commands at once, execute them in order!
 >
@@ -32,7 +30,7 @@
 cd path\to\platform-tools
 ```
 
-#### Flash TWRP recovery
+#### Flash modified TWRP recovery
 > Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
 ```cmd
 fastboot flash recovery path\to\twrp.img reboot recovery
@@ -55,7 +53,7 @@ adb pull /dev/block/by-name/boot boot.img
 ```
 
 ### Partitioning guide
-> Your Xiaomi Mi 8 may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
+> Your device may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
 
 #### Unmount data
 ```cmd
@@ -63,9 +61,8 @@ adb shell umount /dev/block/by-name/userdata
 ```
 
 #### Preparing for partitioning
-> Download the parted file and move it in the platform-tools folder, then run
 ```cmd
-adb push parted /cache/ && adb shell "chmod 755 /cache/parted" && adb shell /cache/parted /dev/block/sda
+adb shell parted /dev/block/sda
 ```
 
 #### Printing the current partition table
@@ -75,7 +72,7 @@ print
 ```
 
 #### Removing userdata
-> Replace **$** with the number of the **userdata** partition, which should be **21**
+> Replace **$** with the number of the **userdata** partition, which should be **idk**
 ```cmd
 rm $
 ```
@@ -119,12 +116,12 @@ quit
 > [!note]
 > If this command and the next one fails (for example: "Failed to access `/dev/block/by-name/win`: No such file or directory"), reboot your phone, then boot back into the recovery provided in the guide and try again
 ```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINDIPPER
+adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINOP7
 ``` 
 
 ### Formatting ESP drive
 ```cmd
-adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPDIPPER
+adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPOP7
 ```
 
 ### Formatting data
