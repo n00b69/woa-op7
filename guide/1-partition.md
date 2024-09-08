@@ -9,7 +9,7 @@
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
   
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/twrp.img)
+- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
 ### Notes
 > [!WARNING]  
@@ -30,10 +30,11 @@
 cd path\to\platform-tools
 ```
 
-#### Flash modified TWRP recovery
+#### Boot modified TWRP recovery
 > Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
 ```cmd
-fastboot flash recovery path\to\twrp.img reboot recovery
+fastboot boot path\to\moddedtwrp
+img
 ```
 
 ### Backing up important files
