@@ -21,10 +21,7 @@ img
 ```
 
 ### Entering mass storage mode
-> If it asks you to run it again, do so
-```cmd
-adb shell msc
-```
+- In TWRP press **Advanced** > **Enable Mass Storage Mode**
 
 ### Diskpart
 ```cmd
