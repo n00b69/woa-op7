@@ -1,7 +1,6 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
 # Running Windows on the OnePlus 7 Pro / 7T Pro
-# Running Windows on the Xiaomi Mi 8
 
 ## Troubleshooting Issues
 > Below you will find a list of common problems and their solutions
@@ -29,7 +28,7 @@ adb push path\to\modemst2.bin /cache/ & adb shell dd if=/cache/modemst2.bin of=/
 - Reboot your device and check if LTE works.
 > [!Note]
 > If it still does not work, you will have to do some additional steps;
-- Download the [stock rom for your device](https://xmfirmwareupdater.com/miui/dipper/)
+- Download the stock rom for your device
 - Open it, look for a file called **modem.img** and extract it.
 - Boot into fastboot mode (`adb reboot bootloader`).
 - Flash this **modem.img** with the below command, replacing `path\to\modem.img` with the actual path of the image
