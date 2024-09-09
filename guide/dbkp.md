@@ -9,7 +9,7 @@
 
 - [Magiskboot](LINKNOW)
 
-- [Dualboot Kernel Patcher](LINKNOW)
+- [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/Files/DualBootKernelPatcher.zip)
 
 ### Boot modified TWRP recovery
 > Replace `path\to\moddedtwrp.img` with the actual path of the image
@@ -28,7 +28,9 @@ adb pull /dev/block/by-name/boot boot.img
 - Open **magiskboot.exe** and IDFK
 
 ### Patching your boot image
-- Open **dbkp.exe** and IDFK
+- Download and extract **DualBootKernelPatcher.zip**.
+- Navigate to `bin` > `Windows`, then run **DualBootKernelPatcher-x86_64.exe**
+- Then idk what else, I guess "Select the unpacked boot image and press patch"?
 
 ### Repacking your boot image
 - Open **magiskboot.exe** and IDFK
