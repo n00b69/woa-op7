@@ -11,6 +11,10 @@
 
 - [MSM Download Tool](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) (OnePlus 7T Pro)
 
+## Notes
+> [!Warning]
+> If you are here because you want to uninstall Windows rather than because youe phone has been bricked, make sure to back up your data first. All of your data will be lost.
+
 ### Extracting the MSM Download Tool
 - Download the **MSM Download Tool** rom for your device (which should be in .zip format), then extract the contents of the .zip file somewhere.
 
@@ -26,11 +30,10 @@
 ### Flashing the stock rom
 - Open **MsmDownloadTool V4.0.exe** located in the MSM DownloadTool archive you downloaded earlier.
 - In the login menu user type, select **Others**.
-- Press the `flash` button, then **guacamole/hotdog_....ops** file located in the same folder
+- It should now automatically start flashing the rom file located in the same folder. This will take around 10 minutes.
 
 #### Rebooting to Android
-> After the flashing is completed (it will usually take around 10 minutes), your device should automatically reboot into Android.
-- If it doesn't, hold the **volume down** + **power** buttons until it reboots.
+> After the flashing is completed your device will automatically reboot into Android. There are no steps here.
 
 ## Finished!
 
