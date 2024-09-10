@@ -7,7 +7,7 @@
 ### Prerequisites
 - [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
-- [Magiskboot](LINKNOW)
+- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/Files/magiskboot-e159716-x86_64.zip)
 
 - [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/Files/DualBootKernelPatcher.zip)
 
@@ -19,13 +19,21 @@ img
 ```
 
 #### Back up your boot image
-> This will back up your boot image in the current directory (for example `C:\platform-tools`)
+> This will back up your boot image in the current directory (for example `C:\platform-tools`).
+> 
+> If your current directory is not your **platform-tools** folder, run ```cd path\to\platform-tools```, replacing `path\to` with the actual path of the folder.
 ```cmd
 adb pull /dev/block/by-name/boot boot.img
 ```
 
+#### Setting up magiskboot
+- Download **magiskboot-....zip** and copy **magiskboot.exe** into your `platform-tools` folder.
+
 ### Unpacking your boot image
-- Open **magiskboot.exe** and IDFK
+> Make sure both **boot.img** and **magiskboot.exe** are in your current directory.
+```cmd
+./magiskboot unpack boot.img
+```
 
 ### Patching your boot image
 - Download and extract **DualBootKernelPatcher.zip**.
@@ -33,7 +41,10 @@ adb pull /dev/block/by-name/boot boot.img
 - Then idk what else, I guess "Select the unpacked boot image and press patch"?
 
 ### Repacking your boot image
-- Open **magiskboot.exe** and IDFK
+> This will repack your patched boot image into a new file called **new_boot.img**
+```cmd
+./magiskboot repack boot.img
+```
 
 ### Reboot to fastboot
 ```cmd
@@ -41,12 +52,12 @@ adb reboot bootloader
 ```
 
 ### Flashing the patched boot image
-> Replace `path\to\patched_boot.img` with the actual path of the image
+> Replace `path\to\new_boot.img` with the actual path of the image
 ```cmd
-fastboot flash boot_a path\to\patched_boot.img
+fastboot flash boot_a path\to\new_boot.img
 ```
 ```cmd
-fastboot flash boot_b path\to\patched_boot.img
+fastboot flash boot_b path\to\new_boot.img
 ```
 
 #### Reboot your device
