@@ -21,8 +21,7 @@
 ### Booting into EDL Mode
 > If you're already in EDL, you can skip this step
 - Open **Device Manager** on your PC.
-- Connect your phone to your PC and hold down the **volume up** and **power** buttons for 10 seconds.
-- When your phone starts rebooting, hold down the **volume up**, **volume down**, and **power** buttons simultaneously for 10 seconds.
+- With your phone turned off, hold **volume up** + **volume down** at the same time, then connect your phone to your PC and wait for a USB sound.
 - Locate **Qualcomm HS-USB QDLoader 9008** in the **Ports (COM & LPT)** category of Device Manager.
 - If the device is missing entirely, is called **QUSB_BULK_CID**, or has a ⚠️ yellow warning triangle / question mark, (or is located in any other category such aa**Other devices**), you need to install EDL drivers first.
 - To install EDL drivers, extract the contents of **QUD.zip** somewhere, right click on **QUSB_BULK_CID**, click on **Update driver** and **Browse my computer for drivers**, then find and select the **QUD** folder.
