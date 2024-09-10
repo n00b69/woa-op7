@@ -7,7 +7,7 @@
 ### Prerequisites
 - [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
-- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/Files/magiskboot-e159716-x86_64.zip)
+- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/Files/magiskboot.exe)
 
 - [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/Files/DualBootKernelPatcher.zip)
 
@@ -27,7 +27,7 @@ adb pull /dev/block/by-name/boot boot.img
 ```
 
 #### Setting up magiskboot
-- Download **magiskboot-....zip** and copy **magiskboot.exe** into your `platform-tools` folder.
+- Download **magiskboot.exe** and move it into your `platform-tools` folder.
 
 ### Unpacking your boot image
 > Make sure both **boot.img** and **magiskboot.exe** are in your current directory.
