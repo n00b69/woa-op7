@@ -31,7 +31,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 - [Reinstall instructions](guide/reinstall.md)
 
-- ~~[Uninstall instructions](guide/uninstall.md)~~ soon
+- [Uninstall instructions](guide/edl.md)
 
 
 ## Contributors
