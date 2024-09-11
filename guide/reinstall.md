@@ -29,7 +29,7 @@ diskpart
 ```
 
 #### Select the Windows volume of the phone
-> Use `list volume` to find it, replace `$` with the actual number of **WINOP7**
+> Use `list volume` to find it, replace `$` with the actual number of **WINONEPLUS**
 ```diskpart
 select volume $
 ``` 
@@ -45,7 +45,7 @@ exit
 ```
 
 #### Formatting Windows
-> Go to Windows Explorer > This PC and select **WINOP7**. Right click and format as NTFS.
+> Go to Windows Explorer > This PC and select **WINONEPLUS**. Right click and format as NTFS.
 
 ### Installing Windows
 > [!Warning]
@@ -61,12 +61,12 @@ dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
 
 ### Copying your boot.img into Windows
 > Skip this step if you do not have a copy of your rooted boot.img
-- Drag and drop the **rooted_boot.img** from the **platform-tools** folder into the **WINOP7** disk in Windows Explorer, then rename it to **boot.img**.
+- Drag and drop the **rooted_boot.img** from the **platform-tools** folder into the **WINONEPLUS** disk in Windows Explorer, then rename it to **boot.img**.
 
 ### Installing Drivers
 - Download and unpack the driver archive for your device, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
 
-> If it asks you to enter a letter, enter the drive letter of **WINOP7** (which should be **X**), then press enter
+> If it asks you to enter a letter, enter the drive letter of **WINONEPLUS** (which should be **X**), then press enter
   
 ### Boot into Windows
 - Reboot your phone. If you end up in Android instead of Windows, flash the UEFI again using WOA Helper.
