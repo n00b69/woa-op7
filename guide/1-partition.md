@@ -31,6 +31,9 @@ cd path\to\platform-tools
 ```
 
 #### Boot modified TWRP recovery
+> [!Note]
+> This image may not boot on OOS12, if this is the case, downgrade to OOS11 first, install Windows, then update back to OOS12.
+
 > Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
 ```cmd
 fastboot boot path\to\moddedtwrp
