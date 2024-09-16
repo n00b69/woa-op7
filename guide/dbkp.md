@@ -66,10 +66,10 @@ fastboot reboot
 ```
 
 #### Booting into Windows
-- Move the **alert slider** into IDFK position and reboot (or turn on) your device.
+- Move the **alert slider** into the top position and reboot (or turn on) your device.
 
 #### Booting into Android
-- Move the **alert slider** into IDFK position and reboot (or turn on) your device.
+- Move the **alert slider** into the middle or bottom position and reboot (or turn on) your device.
 
 ## Finished!
 
