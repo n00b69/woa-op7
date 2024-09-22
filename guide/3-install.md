@@ -103,7 +103,7 @@ fastboot boot path\to\devicename-uefi.img
 ### Reboot to Android
 Your device should reboot by itself after +- 10 minutes of waiting, after which you will be booted into Android, for the last step.
 
-## [Last step: Setting up dualboot](/guide/4-dualboot.md)
+## [Last step: Setting up dualboot](/guide/dualboot-selection.md)
 
 
 
