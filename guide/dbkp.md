@@ -7,38 +7,51 @@
 ### Prerequisites
 - [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
-- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/Files/magiskboot.exe)
+- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
 
-- [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/Files/DualBootKernelPatcher.zip)
+- [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
+
+- [.fd file](https://github.com/n00b69/woa-op7/releases/DBKP) (download the one for your device, either `guacamole` or `hotdog`)
+
+### Opening CMD as an admin
+> Open CMD as an **administrator**, then run the below command, replacing `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
+>
+> Do not close this window. You will need to use it throughout this entire guide.
+```cmd
+cd path\to\platform-tools
+```
 
 ### Boot modified TWRP recovery
 > Replace `path\to\moddedtwrp.img` with the actual path of the image
 ```cmd
-fastboot boot path\to\moddedtwrp
-img
+fastboot boot path\to\moddedtwrp.img
 ```
 
 #### Back up your boot image
 > This will back up your boot image in the current directory (for example `C:\platform-tools`).
-> 
-> If your current directory is not your **platform-tools** folder, run ```cd path\to\platform-tools```, replacing `path\to` with the actual path of the folder.
 ```cmd
-adb pull /dev/block/by-name/boot boot.img
+adb pull /dev/block/by-name/boot_a boot.img
 ```
 
-#### Setting up magiskboot
-- Download **magiskboot.exe** and move it into your `platform-tools` folder.
+#### Setting up required files
+- Download **magiskboot.exe** and move it into the `platform-tools` folder.
+- Download **DualBootKernelPatcher.zip** and extract the **DualBootKernelPatcher** folder into the `platform-tools` folder.
+- Download **DEVICENAME.fd** for your device and move it into the `platform-tools` folder.
 
 ### Unpacking your boot image
-> Make sure both **boot.img** and **magiskboot.exe** are in your current directory.
+> Make sure both **boot.img** is in the `platform-tools` folder.
 ```cmd
 ./magiskboot unpack boot.img
 ```
 
 ### Patching your boot image
-- Download and extract **DualBootKernelPatcher.zip**.
-- Navigate to `bin` > `Windows`, then run **DualBootKernelPatcher-x86_64.exe**
-- Then idk what else, I guess "Select the unpacked boot image and press patch"?
+> Replace the two occurences of `DEVICENAME` in the below command with your actual devicename (`guacamole` or `hotdog`)
+```cmd
+./DualBootKernelPatcher\bin\Windows\DualBootKernelPatcher-x86_64.exe ./kernel ./DEVICENAME.fd ./output ./DualBootKernelPatcher\Config\DualBoot.Sm8150.cfg ./DualBootKernelPatcher\ShellCode\ShellCode.DEVICENAME.bin
+```
+
+### Renaming the kernel file
+- Delete the **kernel** file in the `platform-tools` folder, then rename the **output** file to `kernel`
 
 ### Repacking your boot image
 > This will repack your patched boot image into a new file called **new_boot.img**
