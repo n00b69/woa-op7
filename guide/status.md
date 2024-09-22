@@ -5,19 +5,19 @@
 ## Project Status
 
 #### Features
-- [X] Audio 
+- [X] Audio (speakers)
 - [X] Battery status
 - [x] Bluetooth
 - [x] Brightness 
 - [ ] Camera
 - [x] LTE
-- [ ] Charging
+- [ ] Charging ```Currently disabled due to random BSoD```
 - [x] Display
 - [ ] Flashlight
 - [x] GPU
 - [x] SMS
 - [x] Microphone
-- [x] Display Port ```Theoretically works, needs testing```
+- [x] Display Port ```Mostly works```
 - [x] Touchscreen 
 - [x] UFS
 - [x] USB
