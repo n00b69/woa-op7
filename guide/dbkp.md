@@ -51,7 +51,7 @@ adb pull /dev/block/by-name/boot_a boot.img
 ```
 
 ### Renaming the kernel file
-- Delete the **kernel** file in the `platform-tools` folder, then rename the **output** file to `kernel`
+- Delete or rename the **kernel** file in the `platform-tools` folder, then rename the **output** file to `kernel`
 
 ### Repacking your boot image
 > This will repack your patched boot image into a new file called **new_boot.img**
