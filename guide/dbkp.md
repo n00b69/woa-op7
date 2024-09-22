@@ -39,7 +39,7 @@ adb pull /dev/block/by-name/boot_a boot.img
 - Download **DEVICENAME.fd** for your device and move it into the `platform-tools` folder.
 
 ### Unpacking your boot image
-> Make sure both **boot.img** is in the `platform-tools` folder.
+> Make sure **boot.img** is in the `platform-tools` folder.
 ```cmd
 ./magiskboot unpack boot.img
 ```
