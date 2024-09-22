@@ -47,7 +47,7 @@ adb pull /dev/block/by-name/boot_a boot.img
 ### Patching your boot image
 > Replace the two occurences of `DEVICENAME` in the below command with your actual devicename (`guacamole` or `hotdog`)
 ```cmd
-./DualBootKernelPatcher\bin\Windows\DualBootKernelPatcher-x86_64.exe ./kernel ./DEVICENAME.fd ./output ./DualBootKernelPatcher\Config\DualBoot.Sm8150.cfg ./DualBootKernelPatcher\ShellCode\ShellCode.DEVICENAME.bin
+./DualBootKernelPatcher\bin\Windows\DualBootKernelPatcher-x86_64.exe ./kernel ./DEVICENAME.fd ./output ./DualBootKernelPatcher\Config\DualBoot.Sm8150.cfg ./DualBootKernelPatcher\ShellCode.DEVICENAME.bin
 ```
 
 ### Renaming the kernel file
