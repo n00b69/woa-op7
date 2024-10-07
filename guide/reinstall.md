@@ -16,8 +16,7 @@
 ### Boot modified TWRP recovery
 > Replace `path\to\moddedtwrp.img` with the actual path of the image
 ```cmd
-fastboot boot path\to\moddedtwrp
-img
+fastboot boot path\to\moddedtwrp.img
 ```
 
 ### Entering mass storage mode
