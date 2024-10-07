@@ -3,8 +3,28 @@
 # Running Windows on the OnePlus 7 Pro / 7T Pro
 
 ## Dualboot guide (DualbootKernelPatcher)
+> There are two methods listed below, the first one requires root, the second one does not. Use whichever method suits you the most, as they both do the same.
 
-### Prerequisites
+### Prerequisites (method 1: root required)
+- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
+
+### Setup - Android
+- Download and install the **WOA Helper** app, then open it and grant it root access.
+- Open **WOA Toolbox**, then press the **DUALBOOT KERNEL PATCHER** button.
+- Wait for it to finish, then reboot your phone.
+
+#### Booting into Windows
+- Move the **alert slider** into the top position and reboot (or turn on) your device.
+
+#### Booting into Android
+- Move the **alert slider** into the middle or bottom position and reboot (or turn on) your device.
+
+## Finished!
+
+
+### Prerequisites (method 2: no root required)
+- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
+
 - [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
 - [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
