@@ -36,8 +36,7 @@ cd path\to\platform-tools
 
 > Open a CMD window inside the platform-tools folder, then (while your phone is in fastboot mode) run
 ```cmd
-fastboot boot path\to\moddedtwrp
-img
+fastboot boot path\to\moddedtwrp.img
 ```
 
 ### Backing up important files
