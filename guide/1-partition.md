@@ -55,13 +55,16 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 adb pull /dev/block/by-name/boot boot.img
 ```
 
-### Partitioning guide
-> Your device may have different storage sizes. This guide uses the values of the 128GB model as an example. When relevant, the guide will mention if other values can or should be used.
-
 #### Unmount data
 ```cmd
 adb shell umount /dev/block/by-name/userdata
 ```
+
+### Partitioning guide
+> Pick the one that applies to you
+
+<details>
+<summary><a><strong>For 128GB devices</strong></a></summary>
 
 #### Preparing for partitioning
 ```cmd
@@ -98,8 +101,6 @@ mkpart esp fat32 32GB 32.3GB
 
 #### Creating Windows partition
 > Replace **32.3GB** with the end value of **esp**
->
-> Replace **124GB** with the end value of your disk, use `p free` to find it
 ```cmd
 mkpart win ntfs 32.3GB 124GB
 ```
@@ -114,6 +115,65 @@ set $ esp on
 ```cmd
 quit
 ```
+
+  </summary>
+</details>
+
+<details>
+<summary><a><strong>For 256GB devices</strong></a></summary>
+
+#### Preparing for partitioning
+```cmd
+adb shell parted /dev/block/sda
+```
+
+#### Printing the current partition table
+> Parted will print the list of partitions, userdata should be the last partition in the list.
+```cmd
+print
+```
+
+#### Removing userdata
+> Replace **$** with the number of the **userdata** partition, which should be **19** or **22**
+```cmd
+rm $
+```
+
+#### Recreating userdata
+> Replace **7971MB** with the former start value of **userdata** which we just deleted
+>
+> Replace **128GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 128GB-7971MB = 120GB
+```cmd
+mkpart userdata ext4 7971MB 128GB
+```
+
+#### Creating ESP partition
+> Replace **128GB** with the end value of **userdata**
+>
+> Replace **128.3GB** with the value you used before, adding **0.3GB** to it
+```cmd
+mkpart esp fat32 128GB 128.3GB
+```
+
+#### Creating Windows partition
+> Replace **128.3GB** with the end value of **esp**
+```cmd
+mkpart win ntfs 128.3GB 252GB
+```
+
+#### Making ESP bootable
+> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be **20** or **23**
+```cmd
+set $ esp on
+```
+
+#### Exit parted
+```cmd
+quit
+```
+
+  </summary>
+</details>
 
 ### Formatting Windows drive
 > [!note]
