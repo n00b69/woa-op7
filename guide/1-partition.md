@@ -52,7 +52,7 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 #### Backing up your boot image
 > This will back up your boot image in the current directory
 ```cmd
-adb pull /dev/block/by-name/boot boot.img
+adb pull /dev/block/by-name/boot_a boot.img
 ```
 
 #### Unmount data
@@ -175,24 +175,23 @@ quit
   </summary>
 </details>
 
-### Formatting Windows drive
-> [!note]
-> If this command and the next one fails (for example: "Failed to access `/dev/block/by-name/win`: No such file or directory"), reboot your phone, then boot back into the recovery provided in the guide and try again
-```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINONEPLUS
-``` 
-
-### Formatting ESP drive
-```cmd
-adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPONEPLUS
-```
-
 ### Formatting data
 - Format all data in TWRP, or Android will not boot.
 - ( Go to Wipe > Format data > type yes )
 
 #### Check if Android still starts
 - Just restart the phone, and see if Android still works
+
+### Formatting Windows and ESP drives
+> Reboot into the modded TWRP, then run the below two commands
+```cmd
+adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINONEPLUS
+``` 
+
+```cmd
+adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPONEPLUS
+```
+
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
 
