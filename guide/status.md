@@ -6,18 +6,18 @@
 
 #### Features
 - [X] Audio (speakers)
+- [x] Audio (USB)
 - [X] Battery status
 - [x] Bluetooth
 - [x] Brightness 
 - [ ] Camera
-- [x] LTE
+- [x] LTE/SMS
 - [ ] Charging ```Currently disabled due to random BSoD```
 - [x] Display
 - [ ] Flashlight
 - [x] GPU
-- [x] SMS
 - [x] Microphone
-- [x] Display Port ```Mostly works```
+- [x] DisplayPort ```Mostly works```
 - [x] Touchscreen 
 - [x] UFS
 - [x] USB
