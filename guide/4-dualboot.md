@@ -19,7 +19,7 @@
 > [!Important]
 > If mounting fails, press the **gear** icon to open the Preferences, and enable the **Mount to /mnt** option and try again. You may need to reboot first.
 > 
-> If it still fails, your rom does not support mounting and you will have to manually copy `sta.conf` and `sta.exe` (located in your **internal storage** into Windows once you boot to it (for example by uploading it somewhere and then downloading it while booted into Windows).
+> If it still fails, your rom does not support mounting, you will have to manually copy `sta.conf` and `sta.exe` (located in your **internal storage**) into Windows once you boot to it (for example by uploading it somewhere and then downloading it while booted into Windows).
 >
 > Do the same thing if the folder is read-only.
 - Press the **QUICKBOOT TO WINDOWS** button.
