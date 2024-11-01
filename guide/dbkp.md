@@ -6,6 +6,7 @@
 > There are two methods listed below, the first one requires root, the second one does not. Use whichever method suits you the most, as they both do the same.
 
 Currently not working
+
 ~~### Prerequisites (method 1: root required)~~
 ~~- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)~~
 
