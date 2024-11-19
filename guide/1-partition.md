@@ -30,6 +30,9 @@
 cd path\to\platform-tools
 ```
 
+> [!Note]
+> If your device is not detected in fastboot or recovery mode, you'll have to install USB drivers [using this guide](troubleshooting.md#device-is-not-recognized-in-fastboot-or-recovery)
+
 #### Boot modified TWRP recovery
 > [!Note]
 > This image may not boot on OOS12, if this is the case, downgrade to OOS11 first, install Windows, then update back to OOS12.
@@ -60,12 +63,6 @@ adb pull /dev/block/by-name/boot_a boot.img
 adb shell umount /dev/block/by-name/userdata
 ```
 
-### Partitioning guide
-> Pick the one that applies to you
-
-<details>
-<summary><a><strong>For 128GB devices</strong></a></summary>
-
 #### Preparing for partitioning
 ```cmd
 adb shell parted /dev/block/sda
@@ -86,23 +83,23 @@ rm $
 #### Recreating userdata
 > Replace **7971MB** with the former start value of **userdata** which we just deleted
 >
-> Replace **32GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 32GB-7971MB = 24GB
+> Replace **64GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 64GB-7971MB = **56GB**
 ```cmd
-mkpart userdata ext4 7971MB 32GB
+mkpart userdata ext4 7971MB 64GB
 ```
 
 #### Creating ESP partition
-> Replace **32GB** with the end value of **userdata**
+> Replace **64gB** with the end value of **userdata**
 >
-> Replace **32.3GB** with the value you used before, adding **0.3GB** to it
+> Replace **64.3GB** with the value you used before, adding **0.3GB** to it
 ```cmd
-mkpart esp fat32 32GB 32.3GB
+mkpart esp fat32 64GB 64.3GB
 ```
 
 #### Creating Windows partition
-> Replace **32.3GB** with the end value of **esp**
+> Replace **64.3GB** with the end value of **esp**
 ```cmd
-mkpart win ntfs 32.3GB 124GB
+mkpart win ntfs 64.3GB -0MB
 ```
 
 #### Making ESP bootable
@@ -115,65 +112,6 @@ set $ esp on
 ```cmd
 quit
 ```
-
-  </summary>
-</details>
-
-<details>
-<summary><a><strong>For 256GB devices</strong></a></summary>
-
-#### Preparing for partitioning
-```cmd
-adb shell parted /dev/block/sda
-```
-
-#### Printing the current partition table
-> Parted will print the list of partitions, userdata should be the last partition in the list.
-```cmd
-print
-```
-
-#### Removing userdata
-> Replace **$** with the number of the **userdata** partition, which should be **19** or **22**
-```cmd
-rm $
-```
-
-#### Recreating userdata
-> Replace **7971MB** with the former start value of **userdata** which we just deleted
->
-> Replace **128GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 128GB-7971MB = 120GB
-```cmd
-mkpart userdata ext4 7971MB 128GB
-```
-
-#### Creating ESP partition
-> Replace **128GB** with the end value of **userdata**
->
-> Replace **128.3GB** with the value you used before, adding **0.3GB** to it
-```cmd
-mkpart esp fat32 128GB 128.3GB
-```
-
-#### Creating Windows partition
-> Replace **128.3GB** with the end value of **esp**
-```cmd
-mkpart win ntfs 128.3GB 252GB
-```
-
-#### Making ESP bootable
-> Use `print` to see all partitions. Replace "$" with your ESP partition number, which should be **20** or **23**
-```cmd
-set $ esp on
-```
-
-#### Exit parted
-```cmd
-quit
-```
-
-  </summary>
-</details>
 
 ### Formatting data
 - Format all data in TWRP, or Android will not boot.
@@ -191,7 +129,6 @@ adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINONEPLUS
 ```cmd
 adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPONEPLUS
 ```
-
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
 
