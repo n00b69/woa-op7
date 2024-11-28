@@ -6,7 +6,7 @@
 > There are two methods listed below, the first one requires root, the second one does not. Use whichever method suits you the most, as they both do the same.
 
 ### Prerequisites (method 1: root required)
-- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
+- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
 ### Setup - Android
 - Download and install the **WOA Helper** app, then open it and grant it root access.
