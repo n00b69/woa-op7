@@ -7,7 +7,7 @@
 ### Prerequisites
 - [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
-- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
+- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
 ## Setting up the dualboot app
 > This guide assumes you are rooted, if you aren't, please follow [this guide](root.md) first.
