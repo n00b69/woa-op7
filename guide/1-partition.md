@@ -89,7 +89,7 @@ mkpart userdata ext4 7971MB 64GB
 ```
 
 #### Creating ESP partition
-> Replace **64gB** with the end value of **userdata**
+> Replace **64GB** with the end value of **userdata**
 >
 > Replace **64.3GB** with the value you used before, adding **0.3GB** to it
 ```cmd
