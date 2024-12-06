@@ -23,8 +23,6 @@
 
 
 ### Prerequisites (method 2: no root required)
-- [WOA Helper app](https://github.com/Marius586/WoA-Helper-update/releases/tag/WOA)
-
 - [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
 - [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
