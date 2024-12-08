@@ -58,6 +58,12 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 adb pull /dev/block/by-name/boot_a boot.img
 ```
 
+### Fixing the GPT
+> If you do not do this, Windows may break your device
+```cmd
+adb shell fixgpt
+```
+
 #### Unmount data
 ```cmd
 adb shell umount /dev/block/by-name/userdata
