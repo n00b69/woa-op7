@@ -20,6 +20,11 @@
 >
 > YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
 
+> [!Important]
+> OOS12 and ROMs that use OOS12 firmware have extremely experimental Windows support and may not work at all.
+>
+> It is highly recommended to downgrade to OOS11 if you want to use Windows.
+
 ### Opening CMD as an admin
 > Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
 >
@@ -34,10 +39,7 @@ cd path\to\platform-tools
 > If your device is not detected in fastboot or recovery mode, you'll have to install USB drivers [using this guide](troubleshooting.md#device-is-not-recognized-in-fastboot-or-recovery)
 
 #### Boot modified TWRP recovery
-> [!Note]
-> This image may not boot on OOS12, if this is the case, downgrade to OOS11 first, install Windows, then update back to OOS12.
-
-> While your phone is in fastboot mode
+> While your phone is in fastboot mode, replace `path\to\moddedtwrp.img` with the actual path of the image
 ```cmd
 fastboot boot path\to\moddedtwrp.img
 ```
@@ -53,7 +55,9 @@ cmd /c "for %i in (fsg,fsc,modemst1,modemst2) do (adb shell dd if=/dev/block/by-
 ```
 
 #### Backing up your boot image
-> This will back up your boot image in the current directory
+> This will back up your boot image in the current directory (which should be the **platform-tools** folder)
+>
+> Replug the cable if it says "no devices/emulators found"
 ```cmd
 adb pull /dev/block/by-name/boot_a boot.img
 ```
@@ -65,6 +69,7 @@ adb shell fixgpt
 ```
 
 #### Unmount data
+> Ignore any possible errors and continue
 ```cmd
 adb shell umount /dev/block/by-name/userdata
 ```
@@ -75,7 +80,7 @@ adb shell parted /dev/block/sda
 ```
 
 #### Printing the current partition table
-> Parted will print the list of partitions, userdata should be the last partition in the list.
+> Parted will print the list of partitions, **userdata** should be the last partition in the list.
 ```cmd
 print
 ```
