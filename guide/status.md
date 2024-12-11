@@ -3,6 +3,7 @@
 # Running Windows on the OnePlus 7 Pro / 7T Pro
 
 ## Project Status
+> The support status on this page assumes the device is running OOS11 / ROMs that use OOS11 firmware. OOS12 is not officially supported and things may not work as expected.
 
 #### Features
 - [X] Audio (speakers)
