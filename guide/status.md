@@ -15,13 +15,14 @@
 - [x] LTE/SMS
 - [ ] Charging ```Currently disabled due to random BSoD```
 - [x] Display
+- [x] DisplayPort ```Mostly works```
 - [ ] Flashlight
 - [x] GPU
 - [x] Microphone
-- [x] DisplayPort ```Mostly works```
 - [x] Touchscreen 
 - [x] UFS
 - [x] USB
+- [ ] Vibration
 - [x] Wi-Fi
 
 #### Sensors
@@ -32,3 +33,20 @@
 - [ ] Light sensor
 - [ ] Proximity
 - [X] NFC ```Only guacamole```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
