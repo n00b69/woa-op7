@@ -44,7 +44,7 @@ fastboot reboot
 - A superuser request for Shell might appear on your phone's screen. If it does, grant it access.
 - If the command fails, open **Magisk**, click on `Superuser`, find **Shell**, and grant it access.
 ```cmd
-adb shell "su -c cp /dev/block/by-name/boot_a /sdcard/rooted_boot.img" & adb pull /sdcard/rooted_boot.img
+adb shell "su -c cp /dev/block/by-name/boot$(getprop ro.boot.slot_suffix) /sdcard/rooted_boot.img" & adb pull /sdcard/rooted_boot.img
 ```
 
 ## [Next step: Installing Windows](3-install.md)
