@@ -36,7 +36,7 @@ This project is in an early stage, all the files here have been contributed by o
 
 ## Maintainers
 [<img alt="sunflower2333" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/54024877?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/sunflower2333)
-[<img alt="NetUserNOOB" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/146433756?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/NetuserPRO)
+[<img alt="NetuserPRO" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/146433756?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/NetuserPRO)
 
 
 ## Contributors
