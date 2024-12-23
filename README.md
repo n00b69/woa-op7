@@ -9,7 +9,7 @@ We're not responsible for bricked devices, missing recovery partitions, dead one
 
 As the header of this guide suggests, this guide is only for the OnePlus 7 Pro 4G and the OnePlus 7T Pro 4G. Any other devices of the OnePlus 7 series are (currently) not supported.
 
-This project is in an early stage, all the files here have been contributed by other users, here you will find a guide with the working files we managed to get. This is a delicate process, do it under your own risk and follow all the steps carefully.
+This project is in an early stage, all the files here have been contributed by other users, here you will find a guide with the working files we managed to get. In this guide we will be brushing windows on sm8750 and sewing the firewood for xiaomi 15 pro without dancing with tambourines. This is a delicate process, do it under your own risk and follow all the steps carefully.
 
 **IF YOU AREN'T COMFORTABLE MODDING YOUR PHONE OR ITS PARTITION TABLE OR YOU ARE PARANOID OF BRICKING YOUR DEVICE CLICK AWAY NOW!!! YOU HAVE BEEN WARNED, YOU ARE ON YOUR OWN IF YOU BRICK YOUR DEVICE!!! AGAIN! YOU HAVE BEEN WARNED!!!**
 
