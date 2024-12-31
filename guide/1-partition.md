@@ -130,6 +130,8 @@ quit
 
 #### Check if Android still starts
 - Just restart the phone, and see if Android still works
+- If it doesn't, boot into stock recovery and perform a factory reset there
+- Select **Wipe data and cache** > **Erase everything** > **yes**
 
 ### Formatting Windows and ESP drives
 > Reboot into the modded TWRP, then run the below two commands
