@@ -25,7 +25,8 @@
 - In **Qfil**, make sure the correct port is selected. If it says `No Port Available`, select the **Qualcomm HS-USB QDLoader 9008** port.
 > Remember the `COM$` port number, as you will need it shortly.
 - At the top, select "Tools" > "Partition manager", and click **Ok**.
-- If you see a **Download Fail:Sahara Fail** error, make sure your cable stays connected and reboot to EDL again by holding **volume down** + **power**.
+> [!Note]
+> If you see a **Download Fail:Sahara Fail** or **Download Fail:FireHose Fail:FHLoader Fail:Process Fail** error, make sure your cable stays connected and reboot to EDL again by holding **volume down** + **power**.
 - Once you're back in EDL, try opening the Partition manager again.
 - If it still fails, try to repeat the last step a few times. You can also try rebooting your phone and PC.
 
