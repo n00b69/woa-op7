@@ -134,13 +134,9 @@ quit
 - Select **Wipe data and cache** > **Erase everything** > **yes**
 
 ### Formatting Windows and ESP drives
-> Reboot into the modded TWRP, then run the below two commands
+> Reboot into the modded TWRP, then run the below command
 ```cmd
-adb shell mkfs.ntfs -f /dev/block/by-name/win -L WINONEPLUS
-``` 
-
-```cmd
-adb shell mkfs.fat -F32 -s1 /dev/block/by-name/esp -n ESPONEPLUS
+adb shell format
 ```
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
