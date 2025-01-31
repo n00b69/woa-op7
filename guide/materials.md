@@ -29,12 +29,14 @@
 
 
 ### Set up Android boot.img auto-flashing
-
->[!NOTE]
-> Set up Android boot.img auto-flashing on Windows boot or when the battery is low (<15%) to prevent battery dies with uefi.img flashed. 
+> [!NOTE]
+> Set up Android boot.img auto-flashing on Windows boot or when the battery is low (<15%) to prevent the battery from dying with UEFI flashed.
+>
+> If you are using Dualboot Kernel Patcher, do not use this.
 
 - Download the **boot.img auto-flasher** [here](https://github.com/Misha803/My-Scripts/releases/tag/boot.img-Auto-Flasher).
-- Run it, click **INSTALL** button, select when should Android boot.img be auto-flashed (on Windows boot/Low battery) and wait for installation to complete.
+- Run it, click **INSTALL** button, select when the Android boot.img should be auto-flashed (on Windows boot/Low battery) and wait for the installation to complete.
+- To uninstall the auto-flasher, open the **boot.img auto-flasher** again and click on **UNINSTALL**.
 
 #### Finished! 
 
