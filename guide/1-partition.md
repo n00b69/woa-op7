@@ -40,6 +40,8 @@ cd path\to\platform-tools
 
 #### Boot modified TWRP recovery
 > While your phone is in fastboot mode, replace `path\to\moddedtwrp.img` with the actual path of the image
+>
+> If the image does not boot on OnePlus 7 Pro (guacamole), use [this image](https://github.com/n00b69/woa-op7/releases/download/Files/guacamolefunny.img) instead
 ```cmd
 fastboot boot path\to\moddedtwrp.img
 ```
