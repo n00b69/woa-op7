@@ -56,8 +56,10 @@ fastboot flash modem path\to\modem.img
 ##### Finished!
 
 ## LTE in Windows does not work
+- Flash [modemprov.zip](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip) in any recovery and then boot into Windows.
+
 > [!Note]
-> You may have to follow the steps above to restore your modem first
+> You may have to follow the steps above in "LTE and other network services in Android no longer work" to restore your modem first
 - In Android, find your APN settings. It should be located in `Connections` > `Mobile Networks` > `Access Point Names`.
 - Write the information of your current APN settings down, then boot into Windows.
 - In `Cellular Settings`, click on `Mobile operator settings` > `APN settings` and add the APN settings you wrote down earlier.
