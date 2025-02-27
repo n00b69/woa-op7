@@ -90,6 +90,11 @@ bcdboot X:\Windows /s Y: /f UEFI
 mountvol y: /d
 ```
 
+### Flashing modemprov.zip
+> Or LTE will not work
+- In TWRP, select `Install` and locate **modemprov.zip**.
+- You may need to use another recovery image with decryption support, or you can sideload it with `ADB Sideload`
+
 ### Reboot to fastboot
 ```cmd
 adb reboot bootloader
