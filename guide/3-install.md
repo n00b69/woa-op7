@@ -11,6 +11,8 @@
   
 - [Drivers](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
+- [Modemprov.zip](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip)
+
 - [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
 ### Boot modified TWRP recovery
