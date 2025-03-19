@@ -14,7 +14,7 @@
 ### Notes
 > [!WARNING]  
 > 
-> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/onepluswoachat).
+> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/woahelperchat).
 > 
 > Do not run all commands at once, execute them in order!
 >
