@@ -27,7 +27,7 @@ fastboot boot path\to\moddedtwrp.img
 - In TWRP press **Advanced** > **Enable Mass Storage Mode**
 
 ### Assign letters to WINONEPLUS and ESPONEPLUS
-> Run the **DriveLetterAssigner** and click **`YES`** to automatically assign the letters **X** and **Y** to **WINNABU** and **ESPNABU**
+> Run the **DriveLetterAssigner** and click **`YES`** to automatically assign the letters **X** and **Y** to **WINONEPLUS** and **ESPONEPLUS**
 
 
 ### Installing Windows
