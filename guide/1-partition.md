@@ -5,25 +5,26 @@
 ## Partitioning your device
 
 ### Prerequisites
-- Unlocked bootloader
+- ```A functioning brain (seriously, you'll need to think!)```
 
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- `Unlocked bootloader`
+
+- [`Android platform tools`](https://developer.android.com/studio/releases/platform-tools)
   
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [`Modified TWRP`](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
 ### Notes
-> [!WARNING]  
+> [!Warning]
+> All your data will be erased! Back up now if needed.
 > 
-> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/onepluswoachat).
-> 
-> Do not run all commands at once, execute them in order!
+> DO NOT REBOOT YOUR PHONE if you think you made a mistake, ask for help in the [Telegram chat](https://t.me/onepluswoachat).
 >
-> YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
+> You can brick your device with the commands below if you do them wrong! Please follow the guide carefully.
 
 > [!Important]
 > OOS12 and ROMs that use OOS12 firmware have extremely experimental Windows support and may not work at all.
 >
-> It is highly recommended to downgrade to OOS11 if you want to use Windows.
+> It is highly recommended to downgrade to OOS11 (or flash any custom ROM which uses OOS11 firmware) if you want to use Windows.
 
 ### Opening CMD as an admin
 > Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
@@ -32,7 +33,7 @@
 > 
 > Replace `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
 ```cmd
-cd path\to\platform-tools
+cd "path\to\platform-tools"
 ```
 
 > [!Note]
@@ -41,7 +42,7 @@ cd path\to\platform-tools
 #### Boot modified TWRP recovery
 > While your phone is in fastboot mode, replace `path\to\moddedtwrp.img` with the actual path of the image
 >
-> If the image does not boot on OnePlus 7 Pro (guacamole), use [this image](https://github.com/n00b69/woa-op7/releases/download/Files/guacamolefunny.img) instead
+> If the image does not boot on `OnePlus 7 Pro` `(guacamole)`, use [this image](https://github.com/n00b69/woa-op7/releases/download/Files/guacamolefunny.img) instead.
 ```cmd
 fastboot boot path\to\moddedtwrp.img
 ```
@@ -97,25 +98,25 @@ rm $
 ```
 
 #### Recreating userdata
-> Replace **7971MB** with the former start value of **userdata** which we just deleted
+> Replace **#** with the former start value of **userdata** which we just deleted
 >
-> Replace **64GB** with the end value you want **userdata** to have. In this example your available usable space in Android will be 64GB-7971MB = **56GB**
+> Replace **$** with the end value you want **userdata** to have. In this example your available usable space in Android will be #GB-$GB = **?GB**
 ```cmd
-mkpart userdata ext4 7971MB 64GB
+mkpart userdata ext4 #GB $GB
 ```
 
 #### Creating ESP partition
-> Replace **64GB** with the end value of **userdata**
+> Replace **$** with the end value of **userdata**
 >
-> Replace **64.3GB** with the value you used before, adding **0.3GB** to it
+> Replace **$.3GB** with the end value of **userdata**, adding **0.3GB** to it
 ```cmd
-mkpart esp fat32 64GB 64.3GB
+mkpart esp fat32 $GB $.3GB
 ```
 
 #### Creating Windows partition
-> Replace **64.3GB** with the end value of **esp**
+> Replace **$.3GB** with the end value of **esp** you just created 
 ```cmd
-mkpart win ntfs 64.3GB -0MB
+mkpart win ntfs $.3GB -0MB
 ```
 
 #### Making ESP bootable
@@ -131,38 +132,17 @@ quit
 
 ### Formatting data
 - Format all data in TWRP, or Android will not boot.
-- ( Go to Wipe > Format data > type yes )
+- ( Go to `Wipe` > `Format data` > type `yes` )
 
 #### Check if Android still starts
 - Just restart the phone, and see if Android still works
-- If it doesn't, boot into stock recovery and perform a factory reset there
+- If it doesn't, boot into stock recovery and perform a **factory reset** there
 - Select **Wipe data and cache** > **Erase everything** > **yes**
 
 ### Formatting Windows and ESP drives
-> Reboot into the modded TWRP, then run the below command
+> Boot the modded TWRP again, then run the below command
 ```cmd
 adb shell format
 ```
 
 ## [Next step: Rooting your phone](/guide/2-root.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
