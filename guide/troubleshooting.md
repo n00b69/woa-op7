@@ -20,6 +20,11 @@ fastboot boot path\to\renegade-DEVICENAME.img
 
 Now return to the [diskpart section](3-install.md#diskpart) of the installation guide.
 
+> [!Important]
+> Do not use this **Renegade UEFI** image to try and boot Windows later!
+>
+> Use the updated UEFI image provided in the link in the guide instead.
+
 ##### Finished!
 
 ## LTE and other network services in Android no longer work
