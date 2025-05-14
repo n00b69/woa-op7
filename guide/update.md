@@ -5,13 +5,13 @@
 ## Updating drivers
 
 ### Prerequisites
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- [`Android platform tools`](https://developer.android.com/studio/releases/platform-tools)
 
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [`Modified TWRP`](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
-- [Drivers](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
+- [`Drivers`](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
-- [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
+- [`UEFI image`](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
 ### Boot modified TWRP recovery
 > Replace `path\to\moddedtwrp.img` with the actual path of the image
@@ -22,26 +22,11 @@ fastboot boot path\to\moddedtwrp.img
 ### Entering mass storage mode
 - In TWRP press **Advanced** > **Enable Mass Storage Mode**
 
-### Diskpart
-```cmd
-diskpart
-```
+### Assign drive letter to WINONEPLUS  
+> [!NOTE]
+> You can skip this step if WINONEPLUS already has a drive letter assigned 
 
-#### Select Windows volume
-> Use `list volume` to find it, replace `$` with the actual number of **WINONEPLUS**
-```cmd
-select volume $
-```
-
-#### Assign the letter X
-```cmd
-assign letter x
-```
-
-#### Exit diskpart
-```cmd
-exit
-```
+> Run the **DriveLetterAssigner** and click **`Assign Drive Letter X to Windows Volume Only`** to automatically assign the letter **X** to **WINNABU**
 
 ### Installing Drivers
 > [!Note]
@@ -52,7 +37,11 @@ exit
 > If it asks you to enter a letter, enter the drive letter of **WINONEPLUS** (which should be **X**), then press enter
 
 #### Reboot your device
+> [!Warning]
 > Make sure to also change the UEFI image in Android, otherwise you may face a "blue screen of death" (BSoD) when booting Windows later.
+```cmd
+adb reboot
+```
 
 ## Finished!
 

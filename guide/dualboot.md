@@ -5,9 +5,9 @@
 ## Dualboot guide
 
 ### Prerequisites
-- [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
+- [`UEFI image`](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
-- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
+- [`WOA Helper app`](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
 ## Setting up the dualboot app
 > This guide assumes you are rooted, if you aren't, please follow [this guide](root.md) first.
@@ -20,7 +20,7 @@
 > If `/sdcard/Windows` is empty, your rom does not support mounting and you will have to make a boot.img backup inside the app, then copy it manually to Windows once you boot to it (for example by uploading it somewhere and then downloading it while booted into Windows). The same applies to the StA files, which are also generated in your internal storage.
 >
 > Do the same thing if the folder is read-only.
-- Press the **QUICKBOOT TO WINDOWS** button.
+- Press the **`QUICKBOOT TO WINDOWS`** button.
 
 ### Setup - Windows
 > [!Tip]
