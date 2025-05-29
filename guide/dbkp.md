@@ -59,13 +59,13 @@ adb pull /dev/block/by-name/boot_a boot.img
 ### Unpacking your boot image
 > Make sure **boot.img** is in the `platform-tools` folder.
 ```cmd
-./magiskboot unpack boot.img
+magiskboot unpack boot.img
 ```
 
 ### Patching your boot image
 > Replace `DEVICENAME.fd` in the below command with your actual devicename (`guacamole.fd` or `hotdog.fd`)
 ```cmd
-./DualBootKernelPatcher\bin\Windows\DualBootKernelPatcher-x86_64.exe ./kernel ./DEVICENAME.fd ./output ./DualBootKernelPatcher\Config\DualBoot.Sm8150.cfg ./DualBootKernelPatcher\ShellCode\ShellCode.Hotdog.bin
+DualBootKernelPatcher\bin\Windows\DualBootKernelPatcher-x86_64.exe kernel DEVICENAME.fd output DualBootKernelPatcher\Config\DualBoot.Sm8150.cfg DualBootKernelPatcher\ShellCode\ShellCode.Hotdog.bin
 ```
 
 ### Renaming the kernel file
@@ -74,7 +74,7 @@ adb pull /dev/block/by-name/boot_a boot.img
 ### Repacking your boot image
 > This will repack your patched boot image into a new file called **new_boot.img**
 ```cmd
-./magiskboot repack boot.img
+magiskboot repack boot.img
 ```
 
 ### Reboot to fastboot
