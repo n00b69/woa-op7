@@ -9,7 +9,7 @@
 
 #### (un)Supported models
 - [x] OnePlus 7 Pro (GM1910 / GM1911 / GM1913 / GM1917)
-- [ ] OnePlus 7 Pro (GM1915 T-Mobile) ```not supported officially but most things will work (except for LTE)```
+- [x] OnePlus 7 Pro (GM1915 T-Mobile) ```not supported officially but most things will work (except for LTE)```
 - [ ] OnePlus 7 Pro 5G (GM1920 / GM1925) ```not supported and will never be```
 - [x] OnePlus 7T Pro (HD1910 / HD1911 / HD1913)
 - [ ] OnePlus 7T Pro 5G (HD1925) ```not supported and will never be```
