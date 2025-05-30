@@ -4,6 +4,8 @@
 
 ## Project Status
 > The support status on this page assumes the device is running OOS11 / ROMs that use OOS11 firmware. OOS12 is not officially supported and things may not work as expected.
+>
+> To boot Windows on OOS12-based ROMs, you need to flash OOS11 devcfg before booting Windows. You can use the **devcfg flasher** feature in **WOA Helper** to do this.
 
 #### (un)Supported models
 - [x] OnePlus 7 Pro (GM1910 / GM1911 / GM1913 / GM1917)
