@@ -18,7 +18,7 @@ fastboot boot path\to\renegade-DEVICENAME.img
 - Select **USB Attached SCSI (UAS) Storage**.
 - Press the **power** button twice to confirm.
 
-Now return to the [diskpart section](3-install.md#diskpart) of the installation guide.
+Now return to the [Assign drive letters section](3-install.md#Assign-letters-to-WINONEPLUS-and-ESPONEPLUS) of the installation guide.
 
 > [!Important]
 > Do not use this **Renegade UEFI** image to try and boot Windows later!

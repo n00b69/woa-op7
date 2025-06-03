@@ -6,7 +6,7 @@
 > There are two methods listed below, the first one requires root, the second one does not. Use whichever method suits you the most, as they both do the same.
 
 ### Prerequisites (method 1: root required)
-- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
+- [`WOA Helper app`](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
 ### Setup - Android
 - Download and install the **WOA Helper** app, then open it and grant it root access.
@@ -23,13 +23,13 @@
 
 
 ### Prerequisites (method 2: no root required)
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [`Modified TWRP`](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
-- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
+- [`Magiskboot`](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
 
-- [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
+- [`DualBoot Kernel Patcher`](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
 
-- [.fd file](https://github.com/n00b69/woa-op7/releases/DBKP) (download the one for your device, either `guacamole` or `hotdog`)
+- [`.fd file`](https://github.com/n00b69/woa-op7/releases/DBKP) (download the one for your device, either `guacamole` or `hotdog`)
 
 ### Opening CMD as an admin
 > Open CMD as an **administrator**, then run the below command, replacing `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
