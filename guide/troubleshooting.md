@@ -20,6 +20,11 @@ fastboot boot path\to\renegade-DEVICENAME.img
 
 Now return to the [Assign drive letters section](3-install.md#Assign-letters-to-WINONEPLUS-and-ESPONEPLUS) of the installation guide.
 
+> [!Important]
+> Do not use this **Renegade UEFI** image to try and boot Windows later!
+>
+> Use the updated UEFI image provided in the link in the guide instead.
+
 ##### Finished!
 
 ## LTE and other network services in Android no longer work
