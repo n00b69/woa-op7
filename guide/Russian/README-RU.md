@@ -18,21 +18,21 @@
 
 
 ## Приступим
-- [Статус проекта](guide/Russian/status-ru.md)
+- [Статус проекта](status-ru.md)
 
-- [Инструкция по установке](guide/Russian/1-partition-ru.md)
+- [Инструкция по установке](1-partition-ru.md)
 
-- [Поиск неисправностей](guide/Russian/troubleshooting-ru.md)
+- [Поиск неисправностей](troubleshooting-ru.md)
 
 
 ## Другое
-- [Настройка Dualboot](guide/Russian/dualboot-selection-ru.md)
+- [Настройка Dualboot](dualboot-selection-ru.md)
 
-- [Обновление драйверов](guide/Russian/update-ru.md)
+- [Обновление драйверов](update-ru.md)
 
-- [Иструкция по переустановке](guide/Russian/reinstall-ru.md)
+- [Иструкция по переустановке](reinstall-ru.md)
 
-- [Инструкция по удалению](guide/Russian/edl-ru.md)
+- [Инструкция по удалению](edl-ru.md)
 
 
 ## Авторы
