@@ -33,7 +33,7 @@
 - [Инструкция по удалению](guide/edl.md)
 
 
-## Сопровождающие
+## Авторы
 [<img alt="Project Aloha" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/118143494?s=200&v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Project-Aloha)
 [<img alt="sunflower2333" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/54024877?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/sunflower2333)
 [<img alt="NetuserPRO" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/146433756?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/NetuserPRO)
