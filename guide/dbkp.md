@@ -65,12 +65,12 @@ adb reboot bootloader
 ```
 
 ### Перепрошивка пропатченного загрузочного образа
-> Замените `path\to\new_boot.img` на фактический путь в образу
+> Замените `путь\к\new_boot.img` на фактический путь в образу
 ```cmd
-fastboot flash boot_a path\to\new_boot.img
+fastboot flash boot_a путь\к\new_boot.img
 ```
 ```cmd
-fastboot flash boot_b path\to\new_boot.img
+fastboot flash boot_b путь\к\new_boot.img
 ```
 
 #### Перезагрузите устройство.
