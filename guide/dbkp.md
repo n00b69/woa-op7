@@ -1,89 +1,71 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 
-## Dualboot guide (DualbootKernelPatcher)
-> There are two methods listed below, the first one requires root, the second one does not. Use whichever method suits you the most, as they both do the same.
+## Гайд двойной загрузки (DualbootKernelPatcher)
 
-### Prerequisites (method 1: root required)
-- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
-
-### Setup - Android
-- Download and install the **WOA Helper** app, then open it and grant it root access.
-- Open **WOA Toolbox**, then press the **DUALBOOT KERNEL PATCHER** button.
-- Wait for it to finish, then reboot your phone.
-
-#### Booting into Windows
-- Move the **alert slider** into the top position and reboot (or turn on) your device.
-
-#### Booting into Android
-- Move the **alert slider** into the middle or bottom position and reboot (or turn on) your device.
-
-## Finished!
-
-
-### Prerequisites (method 2: no root required)
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+### Что нужно?
+- [Модифицированный TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
 - [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
 
 - [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
 
-- [.fd file](https://github.com/n00b69/woa-op7/releases/DBKP) (download the one for your device, either `guacamole` or `hotdog`)
+- [.fd файл](https://github.com/n00b69/woa-op7/releases/DBKP) (загрузите файл для вашего устройства, `guacamole` или `hotdog`)
 
-### Opening CMD as an admin
-> Open CMD as an **administrator**, then run the below command, replacing `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
+### Открытие CMD от имени администратора 
+> Откройте CMD от имени **администратора** , затем выполните указанную ниже команду, заменив `путь\к\platform-tools` фактическим путем к папке platform-tools, например **C:\platform-tools**.
 >
-> Do not close this window. You will need to use it throughout this entire guide.
+> Не закрывайте это окно. Оно понадобится вам на протяжении всего руководства.
 ```cmd
-cd path\to\platform-tools
+cd путь\к\platform-tools
 ```
 
-### Boot modified TWRP recovery
-> Replace `path\to\moddedtwrp.img` with the actual path of the image
+### Загрузитесь в модифицированный TWRP recovery
+> Замените `путь\к\moddedtwrp.img` на фактический путь к образу
 ```cmd
-fastboot boot path\to\moddedtwrp.img
+fastboot boot путь\к\moddedtwrp.img
 ```
 
-#### Back up your boot image
-> This will back up your boot image in the current directory (for example `C:\platform-tools`).
+#### Создайте резервную копию вашего загрузочного образа
+> Это позволит создать резервную копию вашего загрузочного образа в текущем каталоге (например `C:\platform-tools`).
 ```cmd
 adb pull /dev/block/by-name/boot_a boot.img
 ```
 
-#### Setting up required files
-- Download **magiskboot.exe** and move it into the `platform-tools` folder.
-- Download **DualBootKernelPatcher.zip** and extract the **DualBootKernelPatcher** folder into the `platform-tools` folder.
-- Download **DEVICENAME.fd** for your device and move it into the `platform-tools` folder.
+#### Настройка необходимых файлов
+- Загрузите **magiskboot.exe** и переместите его в папку `platform-tools`.
+- Загрузите **DualBootKernelPatcher.zip** и извлеките папку **DualBootKernelPatcher** в папку `platform-tools`.
+- Загрузите **DEVICENAME.fd** для вашего устройства и переместите его в `platform-tools` folder.
 
-### Unpacking your boot image
-> Make sure **boot.img** is in the `platform-tools` folder.
+### Распаковка вашего загрузочного образа
+> Убедитесь что **boot.img** находится в папке `platform-tools` 
 ```cmd
 magiskboot unpack boot.img
 ```
 
-### Patching your boot image
-> Replace `DEVICENAME.fd` in the below command with your actual devicename (`guacamole.fd` or `hotdog.fd`)
+### Обновление загрузочного образа
+> Замените `DEVICENAME.fd` в приведенной ниже команде фактическое имя вашего устройства (`guacamole.fd` или `hotdog.fd`)
 ```cmd
 DualBootKernelPatcher\bin\Windows\DualBootKernelPatcher-x86_64.exe kernel DEVICENAME.fd output DualBootKernelPatcher\Config\DualBoot.Sm8150.cfg DualBootKernelPatcher\ShellCode\ShellCode.Hotdog.bin
 ```
 
-### Renaming the kernel file
-- Delete or rename the **kernel** file in the `platform-tools` folder, then rename the **output** file to `kernel`
+### Переименование файла ядра
+- Удалите или переименуйте файл **ядра** в `platform-tools`, tзатем переименуйте **выходной** файл в `kernel`
 
-### Repacking your boot image
-> This will repack your patched boot image into a new file called **new_boot.img**
+### Переупаковка вашего загрузочного образа
+> Это переупакует ваш пропатченный загрузочный образ в новый файл с именем **new_boot.img**
 ```cmd
 magiskboot repack boot.img
 ```
 
-### Reboot to fastboot
+### Перезагрузитесь в fastboot
 ```cmd
 adb reboot bootloader
 ```
 
-### Flashing the patched boot image
-> Replace `path\to\new_boot.img` with the actual path of the image
+### Перепрошивка пропатченного загрузочного образа
+> Замените `path\to\new_boot.img` на фактический путь в образу
 ```cmd
 fastboot flash boot_a path\to\new_boot.img
 ```
@@ -91,18 +73,18 @@ fastboot flash boot_a path\to\new_boot.img
 fastboot flash boot_b path\to\new_boot.img
 ```
 
-#### Reboot your device
+#### Перезагрузите устройство.
 ```cmd
 fastboot reboot
 ```
 
-#### Booting into Windows
-- Move the **alert slider** into the top position and reboot (or turn on) your device.
+#### Загрузка Windows
+- Переместите **ползунок оповещения** в верхнее положение и перезагрузите (или включите) ваше устройство.
 
-#### Booting into Android
-- Move the **alert slider** into the middle or bottom position and reboot (or turn on) your device.
+#### Загрузка Android
+- Переместите **ползунок оповещения** в среднее или нижнее положение и перезагрузите (или включите) ваше устройство
 
-## Finished!
+##Готово!
 
 
 
