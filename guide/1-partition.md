@@ -21,9 +21,9 @@
 > YOU CAN BREAK YOUR DEVICE WITH THE COMMANDS BELOW IF YOU DO THEM WRONG!!!
 
 > [!Important]
-> OOS12 and ROMs that use OOS12 firmware have extremely experimental Windows support and may not work at all.
+> OOS12 and ROMs that use OOS12 firmware have extremely experimental Windows support and may not work at all. You will need to follow additional steps each time before switching between Android and Windows and back (explained in the **dualboot** section of the guide).
 >
-> It is highly recommended to downgrade to OOS11 if you want to use Windows.
+> It is highly recommended to downgrade to OOS11 (or a ROM that uses the OOS11 bootloader & firmware) if you want to use Windows.
 
 ### Opening CMD as an admin
 > Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
