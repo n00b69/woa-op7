@@ -7,7 +7,7 @@
 ### Prerequisites
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
 - [Drivers](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
