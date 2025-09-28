@@ -1,13 +1,13 @@
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 
-There are two methods to dualboot Windows. Select the method you would like to use below.
+Существует два способа двойной загрузки Windows. Выберите нужный способ ниже.
 
-| **Classic method** | **Dualboot Kernelpatcher**
+| **Класический метод** | **Dualboot Kernelpatcher**
 |------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------
-| <a href="dualboot.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zsta.png" width="80"></a> | <a href="dbkp.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zdbkp.png" width="80"></a>
-| - Root required | - No root required
-| - Dualboot using an app | - Dualboot using the alert slider
-| [Classic guide](dualboot.md) | [DBKP guide](dbkp.md)
+| <a href="4-dualboot.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zsta.png" width="80"></a> | <a href="dbkp.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zdbkp.png" width="80"></a>
+| - Требует root | - Не требует root
+| - Двойная загрузка с использованием приложения | - Двойная загрузка с использованием ползунка оповещения
+| [Классический гайд](4-dualboot.md) | [DBKP гайд](dbkp.md)
 
 
 
