@@ -34,7 +34,7 @@ diskpart
 #### Выберите том Windows на телефоне
 > Используйте `list volume` чтобы найти его, замените `$` на фактический номер **WINONEPLUS**
 >
-> Если вы не видите **WINONEPLUS**, воспользуйтесь [этим руководством](troubleshooting.md#mass-storage-mode-does-not-work) для альтернативного метода входа в режим mass storage 
+> Если вы не видите **WINONEPLUS**, воспользуйтесь [этим руководством](troubleshooting-ru.md#mass-storage-mode-does-not-work) для альтернативного метода входа в режим mass storage 
 ```diskpart
 select volume $
 ``` 
@@ -111,7 +111,7 @@ fastboot boot path\to\devicename-uefi.img
 ### Перезагрузитесь в Android
 Ваше устройство должно перезагрузиться автоматически примерно через 10 минут ожидания, после чего вы будете загружены в Android для последнего шага.
 
-## [Последний шаг: настройка двойной загрузки](/guide/dualboot-selection.md)
+## [Последний шаг: настройка двойной загрузки](dualboot-selection-ru.md)
 
 
 

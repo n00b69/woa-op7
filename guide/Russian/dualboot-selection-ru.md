@@ -7,7 +7,7 @@
 | <a href="4-dualboot.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zsta.png" width="80"></a> | <a href="dbkp.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zdbkp.png" width="80"></a>
 | - Требует root | - Не требует root
 | - Двойная загрузка с использованием приложения | - Двойная загрузка с использованием ползунка оповещения
-| [Классический гайд](4-dualboot.md) | [DBKP гайд](dbkp.md)
+| [Классический гайд](4-dualboot-ru.md) | [DBKP гайд](dbkp-ru.md)
 
 
 

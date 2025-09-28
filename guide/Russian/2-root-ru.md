@@ -47,7 +47,7 @@ adb shell "su -c cp /dev/block/by-name/boot$(getprop ro.boot.slot_suffix) /sdcar
 - На экране вашего телефона может появиться запрос на доступ к Shell. Если это так, предоставьте ему доступ..
 - Если команда не выполняется, откройте **Magisk**, щёлкните по вкладке `Superuser`, найдите **Shell**, и предоставьте ему доступ.
 
-## [Следующий шаг: установка Windows](3-install.md)
+## [Следующий шаг: установка Windows](3-install-ru.md)
 
 
 
