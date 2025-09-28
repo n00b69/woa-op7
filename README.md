@@ -24,7 +24,7 @@
 
 
 ## Другое
-- [Настройка Dualboot](guide/dualboot-selection2.md)
+- [Настройка Dualboot](guide/dualboot-selection.md)
 
 - [Даполнительные материалы](guide/materials.md)
 
