@@ -1,40 +1,40 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 
-## Restoring your device using EDL
+## Востановление устройства с помощью EDL
 
-### Prerequisites
-- [Qualcomm EDL Drivers](https://github.com/n00b69/woa-op7/releases/tag/EDL)
+### Что нужно
+- [Драйвера Qualcomm EDL](https://github.com/n00b69/woa-op7/releases/tag/EDL)
 
 - [MSM Download Tool](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) (OnePlus 7 Pro)
 
 - [MSM Download Tool](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) (OnePlus 7T Pro)
 
-## Notes
-> [!Warning]
-> If you are here because you want to uninstall Windows rather than because youe phone has been bricked, make sure to back up your data first. All of your data will be lost.
+## Примечание
+> [⚠️Внимание]
+> Если вы здесь не потому, что ваш телефон сломался, а потому, что хотите удалить Windows, обязательно сначала сделайте резервную копию данных. Все ваши данные будут потеряны.
 
-### Extracting the MSM Download Tool
-- Download the **MSM Download Tool** rom for your device (which should be in .zip format), then extract the contents of the .zip file somewhere.
+### Извлечение MSM Download Tool
+- Загрузите **MSM Download Tool** rom для вашего устройства (он должен быть в формате .zip), затем извлеките содержимое .zip-файла в какое-нибудь место.
 
-### Booting into EDL Mode
-> If you're already in EDL, you can skip this step
-- Open **Device Manager** on your PC.
-- With your phone turned off, hold **volume up** + **volume down** at the same time, then connect your phone to your PC and wait for a USB sound.
-- Locate **Qualcomm HS-USB QDLoader 9008** in the **Ports (COM & LPT)** category of Device Manager.
-- If the device is missing entirely, is called **QUSB_BULK_CID**, or has a ⚠️ yellow warning triangle / question mark, (or is located in any other category such aa**Other devices**), you need to install EDL drivers first.
-- To install EDL drivers, extract the contents of **QUD.zip** somewhere, right click on **QUSB_BULK_CID**, click on **Update driver** and **Browse my computer for drivers**, then find and select the **QUD** folder.
+### Загрузка в режим EDL
+> Если вы уже пользовались EDL, вы можете пропустить этот шаг
+- Откройте **диспетчер устройств** на вашем ПК.
+- При выключенном телефоне одновременно нажмите и удерживайте **кнопки увеличения** и **уменьшения громкости** , **затем подключите телефон к ПК и дождитесь звука USB.**
+- Найдите **Qualcomm HS-USB QDLoader 9008** в категории **«Порты (COM и LPT)»** диспетчера устройств.
+- Если устройство отсутствует полностью, оно называется **QUSB_BULK_CID** или имеет ⚠️желтый предупреждающий треугольник / вопросительный знак (или находится в любой другой категории, например, **«Другие устройства»** ), вам необходимо сначала установить драйверы EDL.
+- Чтобы установить драйверы EDL, извлеките содержимое архива **QUD.zip** куда-нибудь, щелкните правой кнопкой мыши по **QUSB_BULK_CID** , выберите **Обновить драйвер** и **Выполнить поиск драйверов на этом компьютере** , затем найдите и выберите папку **QUD** .
 
-### Flashing the stock rom
-- Open **MsmDownloadTool V4.0.exe** located in the MSM DownloadTool archive you downloaded earlier.
-- In the login menu user type, select **Others**.
-- It should now automatically start flashing the rom file located in the same folder. This will take around 10 minutes.
+### Перепрошивка стоковой прошивки
+- Откройте **MsmDownloadTool V4.0.exe,** расположенный в архиве MSM DownloadTool, который вы скачали ранее.
+- В меню входа выберите тип пользователя **«Другие»** .
+- Теперь устройство должно автоматически начать прошивку файла прошивки, находящегося в той же папке. Это займёт около 10 минут.
 
-#### Rebooting to Android
-> After the flashing is completed your device will automatically reboot into Android. There are no steps here.
+#### Перезагрука в Android
+> После завершения прошивки ваше устройство автоматически перезагрузится в Android. Никаких дополнительных действий не требуется.
 
-## Finished!
+## Готово!
 
 
 
