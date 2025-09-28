@@ -5,6 +5,9 @@
 ## Dualboot guide (DualbootKernelPatcher)
 > There are two methods listed below, the first one requires root, the second one does not. Use whichever method suits you the most, as they both do the same.
 
+> [!Important]
+> If you are using OOS12 or a ROM that uses OOS12 firmware, you will need to follow some additional & alternative steps found [here](troubleshooting.md#i-want-to-use-windows-while-using-oos12)
+
 ### Prerequisites (method 1: root required)
 - [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
