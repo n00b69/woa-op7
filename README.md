@@ -3,35 +3,45 @@
 # Running Windows on the OnePlus 7 Pro / 7T Pro
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/oneplus7woa)
 
-
 ## ⚠️ Warning
-We're not responsible for bricked devices, missing recovery partitions, dead oneplus factoryline ~~workers~~ cowboys, dead pmics, dead ram, dead sim cards, dead display ics, dead cpus, any oneplus shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
+> [!NOTE]
+> - We're not responsible for bricked devices, missing recovery partitions, dead oneplus factoryline ~~workers~~ cowboys, dead pmics, dead ram, dead sim cards, dead display ics, dead cpus, any oneplus shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
+> - All the files here have been contributed by other users, here you will find a guide with the working files we managed to get. In this guide we will be brushing windows on sm8750 and sewing the firewood for xiaomi 15 pro without dancing with tambourines. This is a delicate process, do it under your own risk and follow all the steps carefully.
+> - As the header of this guide suggests, **this guide is only for the _OnePlus 7 Pro 4G_ and the _OnePlus 7T Pro 4G_**. Any other devices of the OnePlus 7 series are (currently) not supported.
 
-As the header of this guide suggests, this guide is only for the OnePlus 7 Pro 4G and the OnePlus 7T Pro 4G. Any other devices of the OnePlus 7 series are (currently) not supported.
+> [!WARNING]
+> **If you're not comfortable with modding your phone or its partition table, or worried about bricking your device, it's okay to take a step back. But the process is not that hard, all you need is to read the guide and follow the instructions carefully, and you should be fine.**
 
-This project is in an early stage, all the files here have been contributed by other users, here you will find a guide with the working files we managed to get. In this guide we will be brushing windows on sm8750 and sewing the firewood for xiaomi 15 pro without dancing with tambourines. This is a delicate process, do it under your own risk and follow all the steps carefully.
 
-**IF YOU AREN'T COMFORTABLE MODDING YOUR PHONE OR ITS PARTITION TABLE OR YOU ARE PARANOID OF BRICKING YOUR DEVICE CLICK AWAY NOW!!! YOU HAVE BEEN WARNED, YOU ARE ON YOUR OWN IF YOU BRICK YOUR DEVICE!!! AGAIN! YOU HAVE BEEN WARNED!!!**
+> [!CAUTION]
+> **❗For everyone not using latest UEFI you MUST update to the [latest release](https://github.com/n00b69/woa-op7/releases/tag/UEFI)❗**
+>
+> **Otherwise you have a constant risk of your UFS DYING AT ANY TIME NO MATTER WHAT!**
 
+
+> [!WARNING]
+> **DO NOT USE VIDEO GUIDES!**
+> 
+> If you do, we will not be able to help you if you mess up.
 
 ## Get started
-- [Project status](guide/status.md)
+- [**`Project status`**](guide/status.md)
 
-- [Installation instructions](guide/1-partition.md)
+- [**`Installation instructions`**](guide/1-partition.md)
 
-- [Troubleshooting](guide/troubleshooting.md)
-
+- [**`Uninstall instructions`**](guide/edl.md)
 
 ## Miscellaneous
-- [Dualboot setup](guide/dualboot-selection2.md)
+- [**`Dualboot setup`**](guide/dualboot-selection2.md)
 
-- [Additional materials](guide/materials.md)
+- [**`Additional materials`**](guide/materials.md)
 
-- [Update drivers](guide/update.md)
+- [**`Update drivers`**](guide/update.md)
 
-- [Reinstall instructions](guide/reinstall.md)
+- [**`️Reinstall instructions`**](guide/reinstall.md)
 
-- [Uninstall instructions](guide/edl.md)
+- [**`Troubleshooting`**](guide/troubleshooting.md)
+
 
 
 ## Maintainers
