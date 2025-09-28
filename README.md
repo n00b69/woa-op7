@@ -18,23 +18,23 @@ This project is in an early stage, all the files here have been contributed by o
 
 
 ## Get started
-- [Project status](guide/status.md)
+- [Project status](guide/English/status.md)
 
-- [Installation instructions](guide/1-partition.md)
+- [Installation instructions](guide/English/1-partition.md)
 
-- [Troubleshooting](guide/troubleshooting.md)
+- [Troubleshooting](guide/English/troubleshooting.md)
 
 
 ## Miscellaneous
-- [Dualboot setup](guide/dualboot-selection2.md)
+- [Dualboot setup](guide/English/dualboot-selection2.md)
 
-- [Additional materials](guide/materials.md)
+- [Additional materials](guide/English/materials.md)
 
-- [Update drivers](guide/update.md)
+- [Update drivers](guide/English/update.md)
 
-- [Reinstall instructions](guide/reinstall.md)
+- [Reinstall instructions](guide/English/reinstall.md)
 
-- [Uninstall instructions](guide/edl.md)
+- [Uninstall instructions](guide/English/edl.md)
 
 
 ## Maintainers
