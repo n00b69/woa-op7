@@ -17,6 +17,9 @@
 - Download the **UEFI image** and place it inside the folder named `UEFI` in your internal storage.
 - Open the WOA Helper app and press the **QUICKBOOT TO WINDOWS** button.
 
+> [!Important]
+> If you are using OOS12 or a ROM that uses OOS12 firmware, you will need to follow some additional & alternative steps found [here](troubleshooting.md#i-want-to-use-windows-while-using-oos12)
+
 ### Setup - Windows
 > [!Tip]
 > If this is your first time booting Windows and you wish to skip the Microsoft Account login, press the **I don't have internet** button in the WiFi page, then when prompted, press the **Continue with limited setup** button.
