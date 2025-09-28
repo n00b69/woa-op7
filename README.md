@@ -26,8 +26,6 @@
 ## Другое
 - [Настройка Dualboot](guide/dualboot-selection.md)
 
-- [Даполнительные материалы](guide/materials.md)
-
 - [Обновление драйверов](guide/update.md)
 
 - [Иструкция по переустановке](guide/reinstall.md)
