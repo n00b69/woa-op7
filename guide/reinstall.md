@@ -5,9 +5,9 @@
 ## Reinstalling Windows
 
 ### Prerequisites
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- [`Android platform tools`](https://developer.android.com/studio/releases/platform-tools)
 
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
+- [`Modified TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
 ### Opening CMD as an admin
 > Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.

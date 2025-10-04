@@ -9,7 +9,7 @@
 > If you are using OOS12 or a ROM that uses OOS12 firmware, you will need to follow some additional & alternative steps found [here](troubleshooting.md#i-want-to-use-windows-while-using-oos12)
 
 ### Prerequisites (method 1: root required)
-- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
+- [`WOA Helper app`](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
 ### Setup - Android
 - Download and install the **WOA Helper** app, then open it and grant it root access.
@@ -26,13 +26,13 @@
 
 
 ### Prerequisites (method 2: no root required)
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [`Modified TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
-- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
+- [`Magiskboot`](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
 
-- [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
+- [`DualBoot Kernel Patcher`](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
 
-- [.fd file](https://github.com/n00b69/woa-op7/releases/DBKP) (download the one for your device, either `guacamole` or `hotdog`)
+- [`.fd file`](https://github.com/n00b69/woa-op7/releases/DBKP) (download the one for your device, either `guacamole` or `hotdog`)
 
 ### Opening CMD as an admin
 > Open CMD as an **administrator**, then run the below command, replacing `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
