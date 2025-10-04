@@ -77,7 +77,7 @@ dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
 - Drag and drop the **rooted_boot.img** from the **platform-tools** folder into the **WINONEPLUS** disk in Windows Explorer, then rename it to **boot.img**.
 
 ### Installing Drivers
-- Download and unpack the driver archive **for your device**, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
+- Download and unpack the driver archive for your device, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
 
 > If it asks you to enter a letter, enter the drive letter of **WINONEPLUS** (which should be **X**), then press enter
   
@@ -97,9 +97,9 @@ mountvol y: /d
 > Or LTE will not work
 - In twrp recovery on your phone go to **`Advanced`** tab - **`ADB Sideload`** - **`Swipe to Start Sideload`**
 
-> Replace `path/to/modemprov.zip` with the actual path of the .zip
+> Replace `path\to\modemprov.zip` with the actual path of the .zip file
 ```cmd
-adb sideload "path/to/modemprov.zip"
+adb sideload path\to\modemprov.zip
 ```
 
 ### Reboot to fastboot
