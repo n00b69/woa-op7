@@ -1,114 +1,113 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 
-## Troubleshooting Issues
-> Below you will find a list of common problems and their solutions
+## Устранение неполадок
+> Ниже вы найдете список распространенных проблем и их решений
 
-## Mass storage mode does not work
-> This can rarely happen, depending on the OOS version that is installed.
-- Download the [guacamole](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-guacamole.img) or [hotdog](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-hotdog.img) Renegade UEFI.
-- Reboot into fastboot mode by running `adb reboot bootloader`.
-> Replace `path\to\renegade-DEVICENAME.img` with the actual path of the UEFI image.
+## Режим Mass storage не работает
+> Это может произойти редко и зависит от установленной версии OOS.
+- Загрузите Renegade UEFI [guacamole](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-guacamole.img) или [hotdog](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-hotdog.img) 
+- Перезагрузитесь в режим fastboot, написав команду `adb reboot bootloader`.
+> Замените `путь\к\renegade-DEVICENAME.img` на фактический путь к образу UEFI.
 ```cmd
-fastboot boot path\to\renegade-DEVICENAME.img
+fastboot boot путь\к\renegade-DEVICENAME.img
 ```
-> Once booted into the UEFI, use the volume buttons to navigate the menu and the power button to confirm
-- Select **UEFI Boot Menu**.
-- Select **USB Attached SCSI (UAS) Storage**.
-- Press the **power** button twice to confirm.
+> После загрузки в UEFI используйте кнопки регулировки громкости для навигации по меню и кнопку питания для подтверждения
+- Выберите **UEFI Boot Menu**.
+- Выберите **USB Attached SCSI (UAS) Storage**.
+- Для подтверждения дважды нажмите кнопку **питания** .
 
-Now return to the [diskpart section](3-install.md#diskpart) of the installation guide.
+Теперь вернитесь к [разделу diskpart](3-install.md#diskpart) 
 
-> [!Important]
-> Do not use this **Renegade UEFI** image to try and boot Windows later!
+> [⚠️Важно!]
+> Не используйте образ **Renegade UEFI** для попытки загрузить Windows позже!
 >
-> Use the updated UEFI image provided in the link in the guide instead.
+> Вместо него используйте обновлённый образ UEFI, предовставленный по ссылке в гайде
 
-##### Finished!
+##### Готово!
 
-## LTE and other network services in Android no longer work
-> Sometimes Windows may wipe your modem partitions, resulting in the loss of LTE in Android. To fix this, you'll need to restore your modem using the backups that you hopefully made [while partitioning your device](1-partition.md#backing-up-important-files). If you did not do this step, there is likely no way to recover.
-- Boot into any recovery other than the stock recovery (ADB commands do not work there)
-- Open CMD in the **platform-tools** folder.
-- Restore the four partitions that you backed up using the below commands. Replace `path\to` with the actual path of the images.
+## LTE и другие сетевые службы на Android больше не работают
+> Иногда Windows может стереть разделы модема, что приводит к потере LTE на Android. Чтобы исправить это, вам потребуется восстановить модем, используя резервные копии, которые вы, как вы надеетесь, сделали [при разбиении устройства на разделы](1-partition.md#backing-up-important-files). Если вы не выполнили этот шаг, восстановить данные, скорее всего, не получится.
+- Загрузитесь в любое recovery, кроме стандартного (команды ADB там не работают)
+- Откройте CMD в папке **platform-tools** 
+- Восстановите четыре раздела, резервные копии которых вы создали, используя команды ниже. Замените `путь\к` на фактический путь к образам.
 ```cmd
-adb push path\to\fsc.bin /cache/ & adb shell dd if=/cache/fsc.bin of=/dev/block/by-name/fsc
+adb push путь\к\fsc.bin /cache/ & adb shell dd if=/cache/fsc.bin of=/dev/block/by-name/fsc
 ```
 
 ```cmd
-adb push path\to\fsg.bin /cache/ & adb shell dd if=/cache/fsg.bin of=/dev/block/by-name/fsg
+adb push путь\к\fsg.bin /cache/ & adb shell dd if=/cache/fsg.bin of=/dev/block/by-name/fsg
 ```
 
 ```cmd
-adb push path\to\modemst1.bin /cache/ & adb shell dd if=/cache/modemst1.bin of=/dev/block/by-name/modemst1
+adb push путь\к\modemst1.bin /cache/ & adb shell dd if=/cache/modemst1.bin of=/dev/block/by-name/modemst1
 ```
 
 ```cmd
-adb push path\to\modemst2.bin /cache/ & adb shell dd if=/cache/modemst2.bin of=/dev/block/by-name/modemst2
+adb push путь\к\modemst2.bin /cache/ & adb shell dd if=/cache/modemst2.bin of=/dev/block/by-name/modemst2
 ```
-- Reboot your device and check if LTE works.
-> [!Note]
-> If it still does not work, you will have to do some additional steps;
-- Download the stock rom for your device
-- Open it, look for a file called **modem.img** and extract it.
-- Boot into fastboot mode (`adb reboot bootloader`).
-- Flash this **modem.img** with the below command, replacing `path\to\modem.img` with the actual path of the image
+- Перезагрузите устройство и проверьте, работает ли LTE.
+> [💡Примечание]
+> Если это не помогло, вам придется выполнить некоторые дополнительные действия;
+- Загрузите стандартную прошивку для вашего устройства
+- Откройте её, найдите файл **modem.img** и извлеките его.
+- Загрузитесь в режиме fastboot (`adb reboot bootloader`).
+- Прошейте этот **modem.img** с помощью следующей команды, заменив `путь\к\modem.img` на фактический путь к образу
 ```cmd
-fastboot flash modem path\to\modem.img
+fastboot flash modem путь\к\modem.img
 ```
 
-##### Finished!
+##### Готово!
 
-## LTE in Windows does not work
-- Flash [modemprov.zip](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip) in any recovery and then boot into Windows.
+## LTE в Windows не работает
+- Прошейте [modemprov.zip](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip) в любом рекавери и загрузитесь в Windows.
 
-> [!Note]
-> You may have to follow the steps above in "LTE and other network services in Android no longer work" to restore your modem first
-- In Android, find your APN settings. It should be located in `Connections` > `Mobile Networks` > `Access Point Names`.
-- Write the information of your current APN settings down, then boot into Windows.
-- In `Cellular Settings`, click on `Mobile operator settings` > `APN settings` and add the APN settings you wrote down earlier.
-- Enable **Cellular**. It may say `No Internet Access`, but it should still work. 
+> [💡Примечание]
+> Возможно, вам сначала придется выполнить действия, описанные в разделе «LTE и другие сетевые службы на Android больше не работают», чтобы восстановить работу модема
+- На Android найдите настройки APN. Они находятся в разделе `Connections` > `Mobile Networks` > `Access Point Names`.
+- Запишите информацию о текущих настройках APN, затем загрузитесь в Windows.
+- В `Cellular Settings`, нажмите на `Mobile operator settings` > `APN settings` и добавьте настройки APN, которые вы записали ранее.
+- Включите **Сотовую связь**. Возможно там написано `No Internet Access`, но это всё равно должно работать. 
 
-##### Finished!
+##### Готово!
 
-## Cannot mount Windows in Android
-If mounting Windows produces an empty folder, you either don't have Windows installed, or your rom does not have mount support.
+## Невозможно смонтировать Windows в Android
+Если при монтировании Windows создается пустая папка, то либо у вас не установлен Windows, либо в вашем ROM нет поддержки монтирования.
 
-##### Finished!
+##### Готово!
 
-## Cannot write to Windows in Android
-> This is caused by shutting down Windows instead of restarting it.
-- To solve this, boot to Windows and then press "restart", then as the screen shuts off boot to TWRP and from there load up Android.
-- Or, disable hibernation in Windows. 
-> Alternatively, if you have already set up the Switch to Android app, simply use this to switch to Android.
+## Невозможно записать в Windows на Android
+> Это вызвано завершением работы Windows вместо ее перезапуска.
+- Чтобы решить эту проблему, загрузите Windows и нажмите «Перезагрузка», затем, когда экран погаснет, загрузите TWRP и оттуда загрузите Android.
+- Или отключите режим гибернации в Windows 
+> Либо, если вы уже настроили приложение Switch to Android, просто используйте его для перехода на Android.
+##### Готово!
 
-##### Finished!
+## USB не работает
+Включите режим USB-хоста с помощью дополнительного [руководства после установки](materials.md#toggling-usb-host-mode).
 
-## USB does not work
-Enable USB host mode using the optional [post install guide](materials.md#toggling-usb-host-mode).
+##### Готово!
 
-##### Finished!
+## Error: 3 Система не может найти указанный путь.
+Эта ошибка обычно означает, что вы пытаетесь установить Windows на диск, на котором уже установлена ​​Windows. Чтобы решить эту проблему, отформатируйте диск в проводнике Windows и повторите попытку.
 
-## Error: 3 The system cannot find the path specified.
-This error usually means that you are trying to install Windows on a disk that already has Windows installed. To solve this issue, format the disk in Windows Explorer and try again.
-
-##### Finished!
+##### Готово!
 
 ## 0xc000021a BSOD
-This usually means that winlogon.exe has failed, and you may need to reapply the Windows image.
+Обычно это означает, что winlogon.exe дал сбой, и вам, возможно, придется повторно применить образ Windows.
 
-##### Finished!
+##### Готово!
 
-## The computer restarted unexpectedly or encountered an unexpected error
-If you stumble upon this error, you will need to [reinstall Windows](reinstall.md).
+## Компьютер неожиданно перезагрузился или возникла непредвиденная ошибка
+Если вы столкнулись с этой ошибкой, вам придется [переустановить Windows](reinstall.md) :(.
 
-##### Finished!
+##### Готово!
 
 ## INACCESSIBLE_BOOT_DEVICE BSOD
-This Blue Screen of Death likely means some broken driver installation. To fix this, [reinstall Windows](reinstall.md).
+Этот синий экран смерти, вероятно, означает, что какой-то драйвер установлен неправильно. Чтобы исправить это, [переустановите Windows](reinstall.md).
 
-##### Finished!
+##### Готово!
 
 
 
