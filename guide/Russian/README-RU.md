@@ -39,7 +39,7 @@
 ## Другое
 - [**`Настройка Dualboot`**](dualboot-selection-ru.md)
 
-- [**`Полезные инструкции и приложения`**](guide/English/materials.md)
+- [**`Полезные инструкции и приложения`**](guide/English/materials-ru.md)
 
 - [**`Обновление драйверов`**](update-ru.md)
 
