@@ -1,36 +1,36 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 
-## Reinstalling Windows
+## Переустановка Windows
 
-### Prerequisites
+### Что нужно
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [Модифицированный TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
-### Opening CMD as an admin
-> Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
+### Открытие CMD от имени администратора
+> Загрузите **platform-tools**  и извлеките папку куда-нибудь, затем откройте CMD от имени **администратора**.
 >
-> It is recommended to keep this window open and use it throughout the entire guide.
+> Рекомендуется держать это окно открытым и использовать его на протяжении всего руководства.
 > 
-> Replace `path\to\platform-tools` with the actual path to the platform-tools folder, for example **C:\platform-tools**.
+> Замените `путь\к\platform-tools` на фактический путь к папке platform-tools, например  **C:\platform-tools**.
 ```cmd
-cd path\to\platform-tools
+cd путь\к\platform-tools
 ```
 
-### Boot modified TWRP recovery
-> Replace `path\to\moddedtwrp.img` with the actual path of the image
+### Загрузитесь в модифицированный recovery TWRP
+> Замените `путь\к\moddedtwrp.img` на фактический путь к образу
 ```cmd
-fastboot boot path\to\moddedtwrp.img
+fastboot boot путь\к\moddedtwrp.img
 ```
 
-### Formatting Windows and ESP partitions
+### Форматирование разделов Windows и ESP
 ```cmd
 adb shell format
 ```
 
-## [Next step: Reinstalling Windows](3-install.md)
+## [Следующий шаг: установка Windows](3-install-ru.md)
 
 
 
