@@ -18,7 +18,7 @@ fastboot boot путь\к\renegade-DEVICENAME.img
 - Выберите **USB Attached SCSI (UAS) Storage**.
 - Для подтверждения дважды нажмите кнопку **питания** .
 
-Теперь вернитесь к [разделу diskpart](3-install.md#diskpart) 
+Теперь вернитесь к [разделу diskpart](3-install-ru.md#diskpart) 
 
 > [⚠️Важно!]
 > Не используйте образ **Renegade UEFI** для попытки загрузить Windows позже!
