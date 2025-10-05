@@ -12,7 +12,7 @@
 - [MSM Download Tool](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) (OnePlus 7T Pro)
 
 ## Примечание
-> [⚠️Внимание]
+> [!WARNING]
 > Если вы здесь не потому, что ваш телефон сломался, а потому, что хотите удалить Windows, обязательно сначала сделайте резервную копию данных. Все ваши данные будут потеряны.
 
 ### Извлечение MSM Download Tool
