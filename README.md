@@ -41,7 +41,7 @@
 
 - [**`Dualboot setup`**](guide/English/dualboot-selection2.md)
 
-- [**`Additional materials`**](guide/English/materials.md)
+- [**`Additional materials`**](guide/English/materials-ru.md)
 
 - [**`Update drivers`**](guide/English/update.md)
 
