@@ -5,15 +5,16 @@
 ## Installing Windows
 
 ### Prerequisites
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
-- [Windows on ARM image](https://arkt-7.github.io/woawin/)
+- [`Modified TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
+
+- [`Windows on ARM image`](https://arkt-7.github.io/woawin/)
   
-- [Drivers](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
+- [`Drivers`](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
-- [Modemprov.zip](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip)
+- [`Modemprov.zip`](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip)
 
-- [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
+- [`UEFI image`](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
 ### Boot modified TWRP recovery
 > Replace `path\to\moddedtwrp.img` with the actual path of the image
@@ -64,7 +65,7 @@ exit
 > [!Important]
 > For performance reasons, it is recommended to use Windows 11 24H2 (builds that start with 261XX, such as 26100.2454)
 
-> Replace `path\to\install.esd` with the actual path of install.esd (it may also be named install.wim or 22631.2861.XXXXXXX.esd)
+> Replace `path\to\install.esd` with the actual path of install.esd (it may also be named install.wim or 26100.2454.XXXXXXX.esd)
 
 ```cmd
 dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
@@ -94,8 +95,12 @@ mountvol y: /d
 
 ### Flashing modemprov.zip
 > Or LTE will not work
-- In TWRP, select `Install` and locate **modemprov.zip**.
-- You may need to use another recovery image with decryption support, or you can sideload it with `ADB Sideload`
+- In twrp recovery on your phone go to **`Advanced`** tab - **`ADB Sideload`** - **`Swipe to Start Sideload`**
+
+> Replace `path\to\modemprov.zip` with the actual path of the .zip file
+```cmd
+adb sideload path\to\modemprov.zip
+```
 
 ### Reboot to fastboot
 ```cmd
@@ -104,6 +109,7 @@ adb reboot bootloader
 
 #### Boot into the UEFI
 > Download the UEFI image for your device, then replace `path\to\devicename-uefi.img` with the actual path of the UEFI image
+> Download the UEFI image **for your device**, then replace `path\to\devicename-uefi.img` with the actual path of the UEFI image.
 ```cmd
 fastboot boot path\to\devicename-uefi.img
 ```

@@ -5,9 +5,9 @@
 ## Dualboot guide
 
 ### Prerequisites
-- [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
+- [`UEFI image`](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
-- [WOA Helper app](https://github.com/n00b69/woa-helper/releases/tag/APK)
+- [`WOA Helper app`](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
 ## Setting up the dualboot app
 > This guide assumes you are rooted, if you aren't, please follow [this guide](root.md) first.
@@ -21,6 +21,9 @@
 >
 > Do the same thing if the folder is read-only.
 - Press the **QUICKBOOT TO WINDOWS** button.
+
+> [!Important]
+> If you are using OOS12 or a ROM that uses OOS12 firmware, you will need to follow some additional & alternative steps found [here](troubleshooting.md#i-want-to-use-windows-while-using-oos12)
 
 ### Setup - Windows
 > [!Tip]

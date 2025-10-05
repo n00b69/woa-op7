@@ -18,7 +18,7 @@ fastboot boot path\to\renegade-DEVICENAME.img
 - Select **USB Attached SCSI (UAS) Storage**.
 - Press the **power** button twice to confirm.
 
-Now return to the [diskpart section](3-install.md#diskpart) of the installation guide.
+Now return to the [Assign drive letters section](3-install.md#Assign-letters-to-WINONEPLUS-and-ESPONEPLUS) of the installation guide.
 
 > [!Important]
 > Do not use this **Renegade UEFI** image to try and boot Windows later!
@@ -89,6 +89,23 @@ If mounting Windows produces an empty folder, you either don't have Windows inst
 Enable USB host mode using the optional [post install guide](materials.md#toggling-usb-host-mode).
 
 ##### Finished!
+
+## I want to use Windows while using OOS12
+> You will need to follow some additional steps, or the system may not boot and / or it will be broken.
+
+#### If you are using WOA Helper
+- If this is your first time booting Windows, run **DEVCFG FLASHER** in the **WOA TOOLBOX** section in WOA Helper. This will flash OOS11 devcfg & copy the files into Windows that are necessary to return to Android.
+- If mounting fails, you will have to manually copy **sdd.exe** and **sdd.conf** into Windows.
+- Enable the **Flash OOS11 devcfg when quickbooting** option in the **PREFERENCES** menu in WOA Helper, now you can use the **QUICKBOOT TO WINDOWS** option.
+- Run **sdd.exe** before running the **Switch to Android** shortcut each time when switching to Android, or modify the **sdd.conf** file accordingly so that it also flashes the boot.img. The instructions to do so can be found in the **sdd.conf** file itself.
+
+#### If you are using Dualboot Kernel Patcher
+- Run **DEVCFG FLASHER** in the **WOA TOOLBOX** section in WOA Helper. This will flash OOS11 devcfg & copy the files into Windows that are necessary to return to Android.
+- If mounting fails, you will have to manually copy **sdd.exe** and **sdd.conf** into Windows (this is only needed once, and can be ignored afterwards).
+- Run **sdd.exe** every time before rebooting to Android.
+
+##### Finished!
+
 
 ## Error: 3 The system cannot find the path specified.
 This error usually means that you are trying to install Windows on a disk that already has Windows installed. To solve this issue, format the disk in Windows Explorer and try again.

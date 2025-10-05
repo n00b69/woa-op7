@@ -5,9 +5,9 @@
 ## Rooting your device
 
 ### Prerequisites
-- [Magisk](https://github.com/topjohnwu/Magisk/releases/latest)
+- [`Magisk`](https://github.com/topjohnwu/Magisk/releases/latest)
 
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- [`Android platform tools`](https://developer.android.com/studio/releases/platform-tools)
 
 ### Copying your boot image to Android
 - Connect your phone to your computer (with USB debugging enabled).
@@ -17,7 +17,7 @@
 #### Patching the boot image
 - Download and install **Magisk**, then open it.
 - Press **Install** > **Patch a file** and select the **boot.img** you just copied.
-- Once the patching has finished, locate  **magisk_patched-27000_XXXX.img** in your **Downloads** folder and copy it into the **platform-tools** folder on your computer.
+- Once the patching has finished, locate  **magisk_patched-29000_XXXX.img** in your **Downloads** folder and copy it into the **platform-tools** folder on your computer.
 
 ### Reboot to fastboot mode
 ```cmd
