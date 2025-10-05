@@ -1,60 +1,60 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 
-## Updating drivers
+## Обновление драйверов
 
-### Prerequisites
+### Что нужно
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Modified TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [Модифицированный TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
 
-- [Drivers](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
+- [Драйвера](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
-- [UEFI image](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
+- [Образ UEFI](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
-### Boot modified TWRP recovery
-> Replace `path\to\moddedtwrp.img` with the actual path of the image
+### Загрузитесь в модифицированный recovery TWRP
+> Замените `путь\к\moddedtwrp.img` на фактический путь к образу
 ```cmd
-fastboot boot path\to\moddedtwrp.img
+fastboot boot путь\к\moddedtwrp.img
 ```
 
-### Entering mass storage mode
-- In TWRP press **Advanced** > **Enable Mass Storage Mode**
+### Вход в режим mass storage
+- В TWRP нажмите **Advanced** > **Enable Mass Storage Mode**
 
 ### Diskpart
 ```cmd
 diskpart
 ```
 
-#### Select Windows volume
-> Use `list volume` to find it, replace `$` with the actual number of **WINONEPLUS**
+#### Выберите том Windows
+> Используйте `list volume` чтобы найти его, замените `$` на фактический номер **WINONEPLUS**
 ```cmd
 select volume $
 ```
 
-#### Assign the letter X
+#### Назначить букву X
 ```cmd
 assign letter x
 ```
 
-#### Exit diskpart
+#### Выйти из diskpart
 ```cmd
 exit
 ```
 
-### Installing Drivers
-> [!Note]
-> This process will take +- 20 minutes. Do not worry, this is normal.
+### Установка драйверов
+> [💡Примечание]
+> Этот процесс займёт около 20 минут. Не волнуйтесь, это нормально.
 
-- Unpack the driver archive, then open the `OfflineUpdater.cmd` file (if an error shows up, run `OfflineUpdaterFix.cmd` instead)
+- Распакуйте архив с драйверами, затем откройте файл `OfflineUpdater.cmd` (если возникнет ошибка, запустите `OfflineUpdaterFix.cmd`)
 
-> If it asks you to enter a letter, enter the drive letter of **WINONEPLUS** (which should be **X**), then press enter
+> Если вас попросят ввести букву, введите букву диска **WINONEPLUS** (которая должна быть **X** ), затем нажмите Enter.
 
-#### Reboot your device
-> Make sure to also change the UEFI image in Android, otherwise you may face a "blue screen of death" (BSoD) when booting Windows later.
+#### Перезагрузите устройство.
+> Обязательно измените образ UEFI в Android, иначе при последующей загрузке Windows вы можете столкнуться с «синим экраном смерти» (BSoD).
 
-## Finished!
+## Готово!
 
 
 
