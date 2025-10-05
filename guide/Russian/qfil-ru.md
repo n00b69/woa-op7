@@ -1,53 +1,53 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 
-## Manually restoring your device in EDL mode
-> Rather than flashing your device into a completely refreshed state using the regular [EDL guide](edl.md), you may want to try to restore it without losing data. If this is the case, the below guide is for you.
+## Восстановление устройства в режиме EDL вручную
+> Вместо того, чтобы полностью обновить устройство, следуя стандартному [руководству EDL](edl-ru.md), вы можете попробовать восстановить его без потери данных. В этом случае, следующее руководство для вас.
 
-### Prerequisites
-- [Qfil, EDL Drivers & OP7series firehose](https://github.com/n00b69/woa-op7/releases/tag/EDL)
+### Что нужно
+- [Qfil, Драйвера EDL & firehose для серии OP7 ](https://github.com/n00b69/woa-op7/releases/tag/EDL)
 
-- OxygenOS firmware for [OnePlus 7 Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) or [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) or any other files that you may want to flash
+- Прошивка OxygenOS для [OnePlus 7 Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) или [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) или любые другие файлы, которые вы захотите прошить
 
-### Setting up Qfil
-- Open **Qfil**.
-- In "Select Build Type", select **flat build**.
-- In "Select programmer", select the downloaded firehose.
-- In "Configuration", make sure the "Device Type" is set to **UFS**.
+### Настройка Qfil
+- Откройте **Qfil**.
+- В разделе "Select Build Type", выберите **flat build**.
+- В разделе "Select programmer", выберите загруженный firehose.
+- В разделе "Configuration", убедитесь, что "Device Type" установлен на **UFS**.
 
-#### Checking if EDL drivers are installed
-- Open **Device Manager** on your PC and search for **Qualcomm HS-USB QDLoader 9008** in the **Ports (COM & LPT)** category of Device Manager.
-- If the device is called **QUSB_BULK_CID** or has a ⚠️ yellow warning triangle / question mark, and is located in any other category (for example **Other devices**), you need to install EDL drivers first.
-- To install EDL drivers, extract the contents of **QUD.zip** somewhere, right click on **QUSB_BULK_CID**, click on **Update driver** and **Browse my computer for drivers**, then find and select the **QUD** folder.
+#### Проверка наличия установленных драйверов EDL
+- Откройте диспетчер устройств на ПК и найдите **Qualcomm HS-USB QDLoader 9008** в категории **«Порты (COM и LPT)»** диспетчера устройств.
+- Если устройство отсутствует полностью, оно называется **QUSB_BULK_CID** или имеет ⚠️желтый предупреждающий треугольник / вопросительный знак (или находится в любой другой категории, например, **«Другие устройства»** ), вам необходимо сначала установить драйверы EDL.
+- Чтобы установить драйверы EDL, извлеките содержимое архива **QUD.zip** куда-нибудь, щелкните правой кнопкой мыши по **QUSB_BULK_CID** , выберите **Обновить драйвер** и **Выполнить поиск драйверов на этом компьютере** , затем найдите и выберите папку **QUD** .
 
-### Making sure Qfil works
-- In **Qfil**, make sure the correct port is selected. If it says `No Port Available`, select the **Qualcomm HS-USB QDLoader 9008** port.
-> Remember the `COM$` port number, as you will need it shortly.
-- At the top, select "Tools" > "Partition manager", and click **Ok**.
-> [!Note]
-> If you see a **Download Fail:Sahara Fail** or **Download Fail:FireHose Fail:FHLoader Fail:Process Fail** error, make sure your cable stays connected and reboot to EDL again by holding **volume down** + **power**.
-- Once you're back in EDL, try opening the Partition manager again.
-- If it still fails, try to repeat the last step a few times. You can also try rebooting your phone and PC.
+### Убедитесь, что Qfil работает
+- В **Qfil** убедитесь, что выбран правильный порт. Если указано `No Port Available`, выберите порт **Qualcomm HS-USB QDLoader 9008**
+> Запомните `COM$` номер порта, он вам скоро понадобится.
+- В верхней части выберите «Инструменты» > «Менеджер разделов» и нажмите **«ОК»**.
+> [💡Примечание]
+> Если вы видите ошибку **Download Fail:Sahara Fail** или **Download Fail:FireHose Fail:FHLoader Fail:Process Fail** , убедитесь, что кабель подключен, и снова перезагрузите устройство в режим EDL, удерживая кнопки уменьшения громкости и питания .
+- Вернувшись в EDL, попробуйте снова открыть диспетчер разделов.
+- Если проблема не устранена, попробуйте повторить последний шаг несколько раз. Также можно попробовать перезагрузить телефон и компьютер.
 
-#### Minimize partition manager
-> Once partition manager is open, leave it open in the background. Do not close it.
+#### Свернуть менеджер разделов
+> После открытия менеджера разделов оставьте его открытым в фоновом режиме. Не закрывайте.
 
-### Preparing necessary firmware files
-> Prepare the firmware files that you want to flash, whether it be a single partition (e.g **system_a** or **modem_a**) or the entire firmware
-- You may need to download the OxygenOS firmware linked in the prerequisites, then use [bkerler's Oppo Decrypt](https://github.com/bkerler/oppo_decrypt) to extract the **.ops** file that is inside.
+### Подготовка необходимых файлов прошивки
+> Подготовьте файлы прошивки, которые вы хотите прошить, будь то отдельный раздел (например, **system_a** или **modem_a** ) или вся прошивка целиком.
+- Возможно, вам придется загрузить прошивку OxygenOS, ссылка на которую приведена в предварительных условиях, а затем воспользоваться утилитой [bkerler's Oppo Decrypt](https://github.com/bkerler/oppo_decrypt) для извлечения файла .ops , который находится внутри.
 
-### Flashing your partitions
-> In Qfil's partition manager
-- Right click on **name_of_partition** > **Manage Partition Data** and press **Load Image**.
-- Select and flash the backup you made earlier.
-- Do the same thing for any other partitions that you may want to flash.
+### Перепрошивка разделов
+> В менеджере разделов Qfi
+- Щелкните правой кнопкой мыши по **имени_раздела** > **Manage Partition Data** и нажмите **Load Image**.
+- Выберите и перепрошейте резервную копию, сделанную ранее.
+- Сделайте то же самое для любых других разделов, которые вы хотите перепрошить.
 
-### Reboot your device
-> When you're done flashing the partitions, you can reboot your device
-- Hold the **volume down** + **power** button for +- 30 seconds and your device should hopefully turn on.
+### Перезагрузите устройство.
+> После завершения прошивки разделов перезагрузите устройство.
+- Удерживайте кнопку **уменьшения громкости** + кнопку **питания** в течение +- 30 секунд, и, скорее всего, ваше устройство включится.
 
-## Finished!
+## Готово!
 
 
 
