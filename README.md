@@ -31,23 +31,23 @@
 
 ## Get started
 
-- [**`Project status`**](guide/status.md)
+- [**`Project status`**](guide/English/status.md)
 
-- [**`Installation instructions`**](guide/1-partition.md)
+- [**`Installation instructions`**](guide/English/1-partition.md)
 
-- [**`Uninstall instructions`**](guide/edl.md)
+- [**`Uninstall instructions`**](guide/English/edl.md)
 
 ## Miscellaneous
 
-- [**`Dualboot setup`**](guide/dualboot-selection2.md)
+- [**`Dualboot setup`**](guide/English/dualboot-selection2.md)
 
-- [**`Additional materials`**](guide/materials.md)
+- [**`Additional materials`**](guide/English/materials.md)
 
-- [**`Update drivers`**](guide/update.md)
+- [**`Update drivers`**](guide/English/update.md)
 
-- [**`️Reinstall instructions`**](guide/reinstall.md)
+- [**`️Reinstall instructions`**](guide/English/reinstall.md)
 
-- [**`Troubleshooting`**](guide/troubleshooting.md)
+- [**`Troubleshooting`**](guide/English/troubleshooting.md)
 
 
 
@@ -80,9 +80,7 @@
 [<img alt="Misha803" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/118528504?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Misha803)
 [<img alt="Dawid2849" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/77780707?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Dawid2849)
 [<img alt="fnm04-sh" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/91214755?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/fnm04-sh)
-
-
-
+[<img alt="MACINTOSH-dev" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/176975342?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/MACINTOSH-dev)
 
 
 
