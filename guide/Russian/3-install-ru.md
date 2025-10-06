@@ -96,10 +96,6 @@ mountvol y: /d
 > Иначе LTE не будет работать
 - В TWRP, выберите `Install` и найдите **modemprov.zip**.
 - Вам может понадобиться использовать другой образ восстановления с поддержкой дешифрования, или вы можете загрузить его с помощью `ADB Sideload`
-> В TWRP recovery на вашем телефоне выберите, **Advanced** далее - **ADB Sideload** и нажмите- **Swipe to Start Sideload**
-```cmd
-adb sideload путь\к\modemprov.zip
-```
 
 ### Перезагрузитесь в fastboot
 ```cmd
