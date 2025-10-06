@@ -145,7 +145,7 @@ quit
 adb shell format
 ```
 
-## [Next step: Rooting your phone](/guide/2-root.md)
+## [Next step: Rooting your phone](2-root.md)
 
 
 
