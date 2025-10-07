@@ -3,15 +3,36 @@
 # Запуск Windows на OnePlus 7 Pro / 7T Pro
 
 ## Гайд двойной загрузки (DualbootKernelPatcher)
+> Ниже описаны 2 метода, первый требует root-доступ , второй не требует root-доступ. Используйте метод который вам больше подходит, т.к. оба они делают одно и то же.
 
-### Что нужно?
-- [Модифицированный TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+> [!Important]
+> Если вы используете OOS12 или прошивку на её основе, вам нужно будет выполнить несколько дополнительных и альтернативных шагов которые вы можете найти [тут](troubleshooting-ru.md#Я-хочу-использовать-Windows-используя-OOS12)
 
-- [Magiskboot](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
+### Prerequisites (method 1: root required)
+- [`Приложение WOA Helper`](https://github.com/n00b69/woa-helper/releases/tag/APK)
 
-- [DualBoot Kernel Patcher](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
+### Настройка - Android
+- Скачайте и установите приложение **WOA Helper**, затем откройте его и предоставьте ему root-доступ.
+- Откройте **WOA Toolbox**, затем нажмите кнопку **DUALBOOT KERNEL PATCHER**.
+- Подождите пока процесс завершится и перезагрузите ваш телефон.
 
-- [.fd файл](https://github.com/n00b69/woa-op7/releases/DBKP) (загрузите файл для вашего устройства, `guacamole` или `hotdog`)
+#### Загрузка в Windows
+- Переместите **alert slider** в верхнюю позицию и перезагрузите (или включите) ваш телефон.
+
+#### Загрузка в Android
+- Переместите **alert slider** в среднюю или нижнюю позицию и перезагрузите (или включите) ваш телефон.
+
+## Готово!
+
+
+### Что нужно? (метод 2: root не нужен)
+- [`Модифицированный TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
+
+- [`Magiskboot`](https://github.com/n00b69/woa-op7/releases/download/DBKP/magiskboot.exe)
+
+- [`DualBoot Kernel Patcher`](https://github.com/n00b69/woa-op7/releases/download/DBKP/DualBootKernelPatcher.zip)
+
+- [`.fd файл`](https://github.com/n00b69/woa-op7/releases/DBKP) (скачайте именно для вашего устройства, например для `guacamole` или `hotdog`)
 
 ### Открытие CMD от имени администратора 
 > Откройте CMD от имени **администратора** , затем выполните указанную ниже команду, заменив `путь\к\platform-tools` фактическим путем к папке platform-tools, например **C:\platform-tools**.
@@ -28,7 +49,7 @@ fastboot boot путь\к\moddedtwrp.img
 ```
 
 #### Создайте резервную копию вашего загрузочного образа
-> Это позволит создать резервную копию вашего загрузочного образа в текущем каталоге (например `C:\platform-tools`).
+> Это создаст резервную копию вашего загрузочного образа в текущем каталоге (например `C:\platform-tools`).
 ```cmd
 adb pull /dev/block/by-name/boot_a boot.img
 ```
@@ -51,7 +72,7 @@ DualBootKernelPatcher\bin\Windows\DualBootKernelPatcher-x86_64.exe kernel DEVICE
 ```
 
 ### Переименование файла ядра
-- Удалите или переименуйте файл **ядра** в `platform-tools`, tзатем переименуйте **выходной** файл в `kernel`
+- Удалите или переименуйте файл **kernel** в `platform-tools`, tзатем переименуйте **output** файл в `kernel`
 
 ### Переупаковка вашего загрузочного образа
 > Это переупакует ваш пропатченный загрузочный образ в новый файл с именем **new_boot.img**

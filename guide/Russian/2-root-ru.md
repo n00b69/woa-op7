@@ -5,9 +5,9 @@
 ## Получение root-прав
 
 ### Что нужно
-- [Magisk](https://github.com/topjohnwu/Magisk/releases/latest)
+- [`Magisk`](https://github.com/topjohnwu/Magisk/releases/latest)
 
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- [`Android platform tools`](https://developer.android.com/studio/releases/platform-tools)
 
 ### Копирование загрузочного образа на Android
 - Подключите телефон к компьютеру (с включенной отладкой по USB).
@@ -17,14 +17,14 @@
 #### Патч загрузочного образа
 - Загрузите и установите **Magisk**, а затем откройте его.
 - Нажмите **Установить** > **Пропатчить boot.img** и выберите **boot.img** который вы только что скопировали.
-- После завершиния операции найдите **файл magisk_patched-27000_XXXX.img** в папке **Загрузки** и скопируйте его в папку **platform-tools** на вашем компьютере.
+- После завершиния операции найдите **файл magisk_patched-29000_XXXX.img** в папке **Загрузки** и скопируйте его в папку **platform-tools** на вашем компьютере.
 
 ### Перезагрузитесь в fastboot
 ```cmd
 adb reboot bootloader
 ```
 
-#### Перепрошивка вашего загрузочного образа с root-правами
+#### Перепрошивка пропатченного загрузочного образа
 > Замените `путь\к\magisk_patched.img` на файтический путь к образу
 ```cmd
 fastboot flash boot_a путь\к\magisk_patched.img

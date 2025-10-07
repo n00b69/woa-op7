@@ -15,16 +15,16 @@
 
 ### Notes
 > [!WARNING]  
-> All your data will be erased! Back up now if needed.
+> **All your data will be erased!** Back up now if needed.
 >
-> DO NOT REBOOT YOUR PHONE! If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/oneplus7woa).
+> **DO NOT REBOOT YOUR PHONE!** If you think you made a mistake, ask for help in the [Telegram chat](https://t.me/oneplus7woa).
 >
 > You can brick your device with the commands below if you do them wrong! Please follow the guide carefully.
 
 > [!Important]
 > OOS12 and ROMs that use OOS12 firmware have extremely experimental Windows support and may not work at all. You will need to follow additional steps each time before switching between Android and Windows and back (explained in the **dualboot** section of the guide).
 >
-> It is highly recommended to downgrade to OOS11 (or a ROM that uses the OOS11 bootloader & firmware) if you want to use Windows.
+> **It is recommended to downgrade to OOS11** (or a ROM that uses the OOS11 bootloader & firmware) if you want to use Windows.
 
 
 ### Opening CMD as an admin

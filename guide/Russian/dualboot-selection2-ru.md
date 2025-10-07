@@ -4,20 +4,8 @@
 
 | **Класический метод** | **Dualboot Kernelpatcher**
 |------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------
-| <a href="4-dualboot.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zsta.png" width="80"></a> | <a href="dbkp.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zdbkp.png" width="80"></a>
+| <a href="dualboot.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zsta.png" width="80"></a> | <a href="dbkp.md"><img src="https://github.com/n00b69/woa-op7/blob/main/guide/zdbkp.png" width="80"></a>
 | - Требует root | - Не требует root
 | - Двойная загрузка с использованием приложения | - Двойная загрузка с использованием ползунка оповещения(alert slider)
-| [Классический гайд](4-dualboot-ru.md) | [DBKP гайд](dbkp-ru.md)
-
-
-
-
-
-
-
-
-
-
-
-
+| [Классический гайд](dualboot-ru.md) | [DBKP гайд](dbkp-ru.md)
 

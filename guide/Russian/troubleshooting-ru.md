@@ -85,7 +85,23 @@ fastboot flash modem путь\к\modem.img
 ##### Готово!
 
 ## USB не работает
-Включите режим USB-хоста с помощью дополнительного [руководства после установки](materials-ru.md#toggling-usb-host-mode).
+Включите режим USB-хоста с помощью дополнительного [руководства после установки](materials-ru.md#переключение-режима-usb).
+
+##### Готово!
+
+## Я хочу использовать Windows используя OOS12
+> Вам нужно будет выполнить несколько дополнительных шагов, иначе система может не загрузиться и / или она будет _сломана_.
+
+#### If you are using WOA Helper
+- If this is your first time booting Windows, run **DEVCFG FLASHER** in the **WOA TOOLBOX** section in WOA Helper. This will flash OOS11 devcfg & copy the files into Windows that are necessary to return to Android.
+- If mounting fails, you will have to manually copy **sdd.exe** and **sdd.conf** into Windows.
+- Enable the **Flash OOS11 devcfg when quickbooting** option in the **PREFERENCES** menu in WOA Helper, now you can use the **QUICKBOOT TO WINDOWS** option.
+- Run **sdd.exe** before running the **Switch to Android** shortcut each time when switching to Android, or modify the **sdd.conf** file accordingly so that it also flashes the boot.img. The instructions to do so can be found in the **sdd.conf** file itself.
+
+#### If you are using Dualboot Kernel Patcher
+- Run **DEVCFG FLASHER** in the **WOA TOOLBOX** section in WOA Helper. This will flash OOS11 devcfg & copy the files into Windows that are necessary to return to Android.
+- If mounting fails, you will have to manually copy **sdd.exe** and **sdd.conf** into Windows (this is only needed once, and can be ignored afterwards).
+- Run **sdd.exe** every time before rebooting to Android.
 
 ##### Готово!
 

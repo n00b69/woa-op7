@@ -27,7 +27,7 @@ fastboot boot path\to\moddedtwrp.img
 
 ### Diskpart
 > [!WARNING]
-> DO NOT ERASE, CREATE OR OTHERWISE MODIFY ANY PARTITION WHILE IN DISKPART!!!! THIS CAN ERASE ALL OF YOUR UFS OR PREVENT YOU FROM BOOTING TO FASTBOOT!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for flashing it with [EDL](edl.md))
+> **DO NOT ERASE, CREATE OR OTHERWISE MODIFY ANY PARTITION WHILE IN DISKPART!** THIS CAN ERASE ALL OF YOUR UFS OR PREVENT YOU FROM BOOTING TO FASTBOOT! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for flashing it with [EDL](edl.md))
 ```cmd
 diskpart
 ```
@@ -63,9 +63,9 @@ exit
 
 ### Installing Windows
 > [!Important]
-> For performance reasons, it is recommended to use Windows 11 24H2 (builds that start with 261XX, such as 26100.2454)
+> For performance reasons, it is recommended to use Windows 11 25H2 (builds that start with 262XX, such as 26200.6713)
 
-> Replace `path\to\install.esd` with the actual path of install.esd (it may also be named install.wim or 26100.2454.XXXXXXX.esd)
+> Replace `path\to\install.esd` with the actual path of install.esd (it may also be named install.wim or 26200.6713.XXXXXXX.esd)
 
 ```cmd
 dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
@@ -108,7 +108,6 @@ adb reboot bootloader
 ```
 
 #### Boot into the UEFI
-> Download the UEFI image for your device, then replace `path\to\devicename-uefi.img` with the actual path of the UEFI image
 > Download the UEFI image **for your device**, then replace `path\to\devicename-uefi.img` with the actual path of the UEFI image.
 ```cmd
 fastboot boot path\to\devicename-uefi.img

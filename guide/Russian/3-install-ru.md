@@ -5,15 +5,15 @@
 ## Установка Windows
 
 ### Что нужно
-- [Модифицированный TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [`Модифицированный TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
-- [Образ Windows ARM](https://arkt-7.github.io/woawin/)
+- [`Образ Windows ARM`](https://arkt-7.github.io/woawin/)
   
-- [Драйвера](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
+- [`Драйвера`](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
-- [Modemprov.zip](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip)
+- [`Modemprov.zip`](https://github.com/n00b69/woa-op7/releases/download/Files/modemprov.zip)
 
-- [Образ UEFI](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
+- [`Образ UEFI`](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
 ### Загрузитесь в модифицированый TWRP recovery
 > Замените `путь\к\moddedtwrp.img` на фактический путь к образу
@@ -26,12 +26,12 @@ fastboot boot путь\к\moddedtwrp.img
 
 ### Diskpart
 > [!WARNING]
-> НЕ СТИРАЙТЕ, НЕ СОЗДАВАЙТЕ И НЕ ИЗМЕНЯЙТЕ КАКИМ-ЛИБО ОБРАЗОМ РАЗДЕЛЫ В DISKPART!!!! ЭТО МОЖЕТ ПРИВЕСТИ К УДАЛЕНИЮ ВСЕЙ ВАШЕЙ UFS ИЛИ ПОМЕШАТЬ ВАМ ЗАГРУЗИТЬСЯ В РЕЖИМЕ FASTBOOT!!!! ЭТО ОЗНАЧАЕТ, ЧТО ВАШЕ УСТРОЙСТВО БУДЕТ НАВСЕГДА ОКИРПИЧЕНО БЕЗ РЕШЕНИЯ! (кроме перепрошивки с помощью [EDL](edl-ru.md)
+> **НЕ ФОРМАТИРУЙТЕ, НЕ СОЗДАВАЙТЕ И НЕ ИЗМЕНЯЙТЕ КАКИМ-ЛИБО ОБРАЗОМ РАЗДЕЛЫ В DISKPART!** ЭТО МОЖЕТ ПРИВЕСТИ К ФОРМАТУ ВСЕЙ ВАШЕЙ UFS ИЛИ ПОМЕШАТЬ ВАМ ЗАГРУЗИТЬСЯ В РЕЖИМЕ FASTBOOT! ЭТО ОЗНАЧАЕТ, ЧТО ВАШЕ УСТРОЙСТВО БУДЕТ НАВСЕГДА ОКИРПИЧЕНО БЕЗ РЕШЕНИЯ! (кроме прошивки с помощью [EDL](edl-ru.md)
 ```cmd
 diskpart
 ```
 
-#### Выберите том Windows на телефоне
+#### Выберите том Windows телефона
 > Используйте `list volume` чтобы найти его, замените `$` на фактический номер **WINONEPLUS**
 >
 > Если вы не видите **WINONEPLUS**, воспользуйтесь [этим руководством](troubleshooting-ru.md#mass-storage-mode-does-not-work) для альтернативного метода входа в режим mass storage 
@@ -62,21 +62,21 @@ exit
 
 ### Установка Windows
 > [!Important]
-> Из соображений производительности рекомендуется использовать Windows 11 24H2 (сборки, начинающиеся с 261XX, например 26100.2454)
+> Из соображений производительности рекомендуется использовать Windows 11 25H2 (сборки, начинающиеся с 262XX, например 26200.6713)
 
-> Замените `путь\к\install.esd` на фактический путь к install.esd (он также может называться install.wim или 22631.2861.XXXXXXX.esd)
+> Замените `путь\к\install.esd` на фактический путь к install.esd (он также может называться install.wim или 26200.6713.XXXXXXX.esd)
 
 ```cmd
 dism /apply-image /ImageFile:путь\к\install.esd /index:6 /ApplyDir:X:\
 ```
 
-> Если вы получили `Error 87`, проверьте индекс вашего образа `dism /get-imageinfo /ImageFile:путь\к\install.esd`, затем замените его `index:6` на фактический номер индекса **Windows 11 Pro** в вашем образе
+> Если вы получили `Error 87`, проверьте индекс вашего образа используя `dism /get-imageinfo /ImageFile:путь\к\install.esd`, затем замените `index:6` на фактический номер индекса **Windows 11 Pro** в вашем образе
 
 ### Копирование вашего boot.img в Windows
 - Перетащите **rooted_boot.img** из папки **platform-tools** на диск **WINONEPLUS** в проводнике Windows, затем переименуйте его в **boot.img**.
 
 ### Установка драйверов
-- Скачайте и распакуйте архив с драйвером для вашего устройства, затем откройте `OfflineUpdater.cmd` файл (если возникнет ошибка, запустите `OfflineUpdaterFix.cmd` )
+- Скачайте и распакуйте архив с драйверами для вашего устройства, затем откройте файл `OfflineUpdater.cmd` (если возникнет ошибка, запустите `OfflineUpdaterFix.cmd` )
 
 > Если вас попросят ввести букву, введите букву диска **WINONEPLUS** (которая должна быть X ), затем нажмите Enter.
   
@@ -94,8 +94,12 @@ mountvol y: /d
 
 ### Прошивка modemprov.zip
 > Иначе LTE не будет работать
-- В TWRP, выберите `Install` и найдите **modemprov.zip**.
-- Вам может понадобиться использовать другой образ восстановления с поддержкой дешифрования, или вы можете загрузить его с помощью `ADB Sideload`
+- В twrp на вашем телефоне перейдите во вкладку **`Advanced`** - **`ADB Sideload`** - **`Swipe to Start Sideload`**
+
+> Замените `путь\к\modemprov.zip` на фактический путь к .zip файлу
+```cmd
+adb sideload путь\к\modemprov.zip
+```
 
 ### Перезагрузитесь в fastboot
 ```cmd
@@ -103,9 +107,9 @@ adb reboot bootloader
 ```
 
 #### Загрузитесь в  UEFI
-> Скачайте образ UEFI для вашего устройства, а затем замените `путь\к\devicename-uefi.img` на фактический путь к образу UEFI
+> Скачайте образ UEFI **для вашего устройства**, а затем замените `путь\к\devicename-uefi.img` на фактический путь к образу UEFI
 ```cmd
-fastboot boot path\to\devicename-uefi.img
+fastboot boot путь\к\devicename-uefi.img
 ```
 
 ### Перезагрузитесь в Android
