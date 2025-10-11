@@ -5,13 +5,13 @@
 ## Обновление драйверов
 
 ### Что нужно
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- [`Android platform tools`](https://developer.android.com/studio/releases/platform-tools)
 
-- [Модифицированный TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [`Модифицированный TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
-- [Драйвера](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
+- [`Драйвера`](https://github.com/n00b69/woa-op7/releases/tag/Drivers)
 
-- [Образ UEFI](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
+- [`Образ UEFI`](https://github.com/n00b69/woa-op7/releases/tag/UEFI)
 
 ### Загрузитесь в модифицированный recovery TWRP
 > Замените `путь\к\moddedtwrp.img` на фактический путь к образу
@@ -22,7 +22,12 @@ fastboot boot путь\к\moddedtwrp.img
 ### Вход в режим mass storage
 - В TWRP нажмите **Advanced** > **Enable Mass Storage Mode**
 
-### Diskpart
+### Назначьте букву диска WINONEPLUS с помощью Diskpart
+> [!NOTE]
+> Вы можете пропустить этот шаг если WINONEPLUS уже присвоена буква диска 
+
+
+### Запустите Diskpart
 ```cmd
 diskpart
 ```
@@ -33,12 +38,12 @@ diskpart
 select volume $
 ```
 
-#### Назначить букву X
+#### Назначьте букву X
 ```cmd
 assign letter x
 ```
 
-#### Выйти из diskpart
+#### Выйдите из diskpart
 ```cmd
 exit
 ```
@@ -52,7 +57,11 @@ exit
 > Если вас попросят ввести букву, введите букву диска **WINONEPLUS** (которая должна быть **X** ), затем нажмите Enter.
 
 #### Перезагрузите устройство.
-> Обязательно измените образ UEFI в Android, иначе при последующей загрузке Windows вы можете столкнуться с «синим экраном смерти» (BSoD).
+> [!NOTE]
+> Обязательно замените образ UEFI в Android, иначе при последующей загрузке в Windows вы можете столкнуться с «синим экраном смерти» (BSoD).
+```cmd
+adb reboot
+```
 
 ## Готово!
 

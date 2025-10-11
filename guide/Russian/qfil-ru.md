@@ -6,9 +6,9 @@
 > Вместо того, чтобы полностью обновить устройство, следуя стандартному [руководству EDL](edl-ru.md), вы можете попробовать восстановить его без потери данных. В этом случае, следующее руководство для вас.
 
 ### Что нужно
-- [Qfil, Драйвера EDL & firehose для серии OP7 ](https://github.com/n00b69/woa-op7/releases/tag/EDL)
+- [`Qfil, Драйвера EDL & firehose для серии OP7`](https://github.com/n00b69/woa-op7/releases/tag/EDL)
 
-- Прошивка OxygenOS для [OnePlus 7 Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) или [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) или любые другие файлы, которые вы захотите прошить
+- `Прошивка OxygenOS для [OnePlus 7 Pro`](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) или [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) или любые другие файлы, которые вы захотите прошить
 
 ### Настройка Qfil
 - Откройте **Qfil**.
@@ -37,10 +37,10 @@
 > Подготовьте файлы прошивки, которые вы хотите прошить, будь то отдельный раздел (например, **system_a** или **modem_a** ) или вся прошивка целиком.
 - Возможно, вам придется загрузить прошивку OxygenOS, ссылка на которую приведена в предварительных условиях, а затем воспользоваться утилитой [bkerler's Oppo Decrypt](https://github.com/bkerler/oppo_decrypt) для извлечения файла .ops , который находится внутри.
 
-### Перепрошивка разделов
-> В менеджере разделов Qfi
+### Прошивка разделов
+> В менеджере разделов Qfil
 - Щелкните правой кнопкой мыши по **имени_раздела** > **Manage Partition Data** и нажмите **Load Image**.
-- Выберите и перепрошейте резервную копию, сделанную ранее.
+- Выберите и прошейте резервную копию, сделанную ранее.
 - Сделайте то же самое для любых других разделов, которые вы хотите перепрошить.
 
 ### Перезагрузите устройство.

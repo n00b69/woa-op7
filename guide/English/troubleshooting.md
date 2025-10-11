@@ -7,7 +7,7 @@
 
 ## Mass storage mode does not work
 > This can rarely happen, depending on the OOS version that is installed.
-- Download the [guacamole](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-guacamole.img) or [hotdog](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-hotdog.img) Renegade UEFI.
+- Download the [`guacamole`](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-guacamole.img) or [`hotdog`](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-hotdog.img) Renegade UEFI.
 - Reboot into fastboot mode by running `adb reboot bootloader`.
 > Replace `path\to\renegade-DEVICENAME.img` with the actual path of the UEFI image.
 ```cmd
@@ -86,7 +86,7 @@ If mounting Windows produces an empty folder, you either don't have Windows inst
 ##### Finished!
 
 ## USB does not work
-Enable USB host mode using the optional [post install guide](materials.md#toggling-usb-host-mode).
+Switch USB to `HOST` mode using the optional [post install guide](materials.md#toggling-usb-mode).
 
 ##### Finished!
 

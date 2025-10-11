@@ -7,8 +7,8 @@
 
 ## Режим Mass storage не работает
 > Это может произойти редко и зависит от установленной версии OOS.
-- Загрузите Renegade UEFI [guacamole](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-guacamole.img) или [hotdog](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-hotdog.img) 
-- Перезагрузитесь в режим fastboot, написав команду `adb reboot bootloader`.
+- Загрузите Renegade UEFI [`guacamole`](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-guacamole.img) или [`hotdog`](https://github.com/n00b69/woa-op7/releases/download/Files/renegade-hotdog.img) 
+- Перезагрузитесь в режим fastboot, используя команду `adb reboot bootloader`.
 > Замените `путь\к\renegade-DEVICENAME.img` на фактический путь к образу UEFI.
 ```cmd
 fastboot boot путь\к\renegade-DEVICENAME.img
@@ -18,7 +18,7 @@ fastboot boot путь\к\renegade-DEVICENAME.img
 - Выберите **USB Attached SCSI (UAS) Storage**.
 - Для подтверждения дважды нажмите кнопку **питания** .
 
-Теперь вернитесь к [разделу diskpart](3-install-ru.md#diskpart) 
+Теперь вернитесь к [разделу Diskpart](3-install-ru.md#Diskpart) 
 
 > [!Important]
 > Не используйте образ **Renegade UEFI** для попытки загрузить Windows позже!
@@ -28,7 +28,7 @@ fastboot boot путь\к\renegade-DEVICENAME.img
 ##### Готово!
 
 ## LTE и другие сетевые службы на Android больше не работают
-> Иногда Windows может стереть разделы модема, что приводит к потере LTE на Android. Чтобы исправить это, вам потребуется восстановить модем, используя резервные копии, которые вы, как вы надеетесь, сделали [при разбиении устройства на разделы](1-partition-ru.md#backing-up-important-files). Если вы не выполнили этот шаг, восстановить данные, скорее всего, не получится.
+> Иногда Windows может стереть разделы модема, что приводит к потере LTE на Android. Чтобы исправить это, вам потребуется восстановить модем, используя резервные копии, которые вы, как вы надеетесь, сделали [при разметке устройства](1-partition-ru.md#Резервное-копирование-важных-разделов). Если вы не выполнили этот шаг, восстановить LTE, скорее всего, не получится.
 - Загрузитесь в любое recovery, кроме стандартного (команды ADB там не работают)
 - Откройте CMD в папке **platform-tools** 
 - Восстановите четыре раздела, резервные копии которых вы создали, используя команды ниже. Замените `путь\к` на фактический путь к образам.
@@ -50,9 +50,9 @@ adb push путь\к\modemst2.bin /cache/ & adb shell dd if=/cache/modemst2.bin 
 - Перезагрузите устройство и проверьте, работает ли LTE.
 > [!Note]
 > Если это не помогло, вам придется выполнить некоторые дополнительные действия;
-- Загрузите стандартную прошивку для вашего устройства
+- Скачайте стандартную прошивку для вашего устройства
 - Откройте её, найдите файл **modem.img** и извлеките его.
-- Загрузитесь в режиме fastboot (`adb reboot bootloader`).
+- Загрузитесь в режим fastboot (`adb reboot bootloader`).
 - Прошейте этот **modem.img** с помощью следующей команды, заменив `путь\к\modem.img` на фактический путь к образу
 ```cmd
 fastboot flash modem путь\к\modem.img
@@ -73,35 +73,35 @@ fastboot flash modem путь\к\modem.img
 ##### Готово!
 
 ## Невозможно смонтировать Windows в Android
-Если при монтировании Windows создается пустая папка, то либо у вас не установлен Windows, либо в вашем ROM нет поддержки монтирования.
+Если при монтировании Windows создается пустая папка, то либо у вас не установлена Windows, либо в вашей прошивке нет поддержки монтирования.
 
 ##### Готово!
 
 ## Невозможно записать в Windows на Android
-> Это вызвано завершением работы Windows вместо ее перезапуска.
-- Чтобы решить эту проблему, загрузите Windows и нажмите «Перезагрузка», затем, когда экран погаснет, загрузите TWRP и оттуда загрузите Android.
+> Это вызвано завершением работы Windows вместо её перезагрузки.
+- Чтобы решить эту проблему, загрузитесь в Windows и нажмите "Перезагрузка" в меню "Пуск", затем, когда экран погаснет, загрузите TWRP и оттуда загрузите Android.
 - Или отключите режим гибернации в Windows 
 > Либо, если вы уже настроили приложение Switch to Android, просто используйте его для перехода на Android.
 ##### Готово!
 
 ## USB не работает
-Включите режим USB-хоста с помощью дополнительного [руководства после установки](materials-ru.md#переключение-режима-usb).
+Переключите USB в режим `HOST` с помощью дополнительного [руководства после установки](materials-ru.md#переключение-режима-USB).
 
 ##### Готово!
 
 ## Я хочу использовать Windows используя OOS12
 > Вам нужно будет выполнить несколько дополнительных шагов, иначе система может не загрузиться и / или она будет _сломана_.
 
-#### If you are using WOA Helper
-- If this is your first time booting Windows, run **DEVCFG FLASHER** in the **WOA TOOLBOX** section in WOA Helper. This will flash OOS11 devcfg & copy the files into Windows that are necessary to return to Android.
-- If mounting fails, you will have to manually copy **sdd.exe** and **sdd.conf** into Windows.
-- Enable the **Flash OOS11 devcfg when quickbooting** option in the **PREFERENCES** menu in WOA Helper, now you can use the **QUICKBOOT TO WINDOWS** option.
-- Run **sdd.exe** before running the **Switch to Android** shortcut each time when switching to Android, or modify the **sdd.conf** file accordingly so that it also flashes the boot.img. The instructions to do so can be found in the **sdd.conf** file itself.
+#### Если вы используете WOA Helper
+- Если вы первый раз загружаете Windows, используйте **DEVCFG FLASHER** в разделе **WOA TOOLBOX** в WOA Helper. Это прошьёт OOS11 devcfg и скопирует в Windows файлы необходимые для загрузки обратно в Android.
+- Если монтирование не раюотает, вам придётся вручную скопировать **sdd.exe** и **sdd.conf** в Windows.
+- Включите **Flash OOS11 devcfg when quickbooting** в меню **PREFERENCES** в WOA Helper, теперь вы можете использовать кнопку **QUICKBOOT TO WINDOWS**.
+- Запускайте **sdd.exe** каждый раз перед запуском ярлыка **Switch to Android** когда перезагружаетесь в Android, или отредактируйте файл **sdd.conf** соответсвенно чтобы он также прошивал boot.img. Вы можете найти инструкцию о том как это сделать в самом файле **sdd.conf**.
 
-#### If you are using Dualboot Kernel Patcher
-- Run **DEVCFG FLASHER** in the **WOA TOOLBOX** section in WOA Helper. This will flash OOS11 devcfg & copy the files into Windows that are necessary to return to Android.
-- If mounting fails, you will have to manually copy **sdd.exe** and **sdd.conf** into Windows (this is only needed once, and can be ignored afterwards).
-- Run **sdd.exe** every time before rebooting to Android.
+#### Если вы используете Dualboot Kernel Patcher
+- Используйте **DEVCFG FLASHER** в разделе **WOA TOOLBOX** в WOA Helper. Это прошьёт OOS11 devcfg и скопирует в Windows файлы необходимые для загрузки обратно в Android.
+- Если монтирование не раюотает, вам придётся вручную скопировать **sdd.exe** и **sdd.conf** в Windows (это необходимо только один раз, и впоследствии может быть проигнорировано).
+- Запускайте **sdd.exe** каждый раз перед перезагрузкой в Android.
 
 ##### Готово!
 

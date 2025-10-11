@@ -5,12 +5,12 @@
 ## Переустановка Windows
 
 ### Что нужно
-- [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
+- [`Android platform tools`](https://developer.android.com/studio/releases/platform-tools)
 
-- [Модифицированный TWRP](https://github.com/n00b69/woa-op7/releases/download/Files/moddedtwrp.img)
+- [`Модифицированный TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
 ### Открытие CMD от имени администратора
-> Загрузите **platform-tools**  и извлеките папку куда-нибудь, затем откройте CMD от имени **администратора**.
+> Скачайте **platform-tools**  и извлеките папку куда-нибудь, затем откройте CMD от имени **администратора**.
 >
 > Рекомендуется держать это окно открытым и использовать его на протяжении всего руководства.
 > 
