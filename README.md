@@ -30,24 +30,22 @@
 > If you do, we will not be able to help you if you mess up.
 
 ## Get started
+- [**`Project status`**](guide/status.md)
 
-- [**`Project status`**](guide/English/status.md)
+- [**`Installation instructions`**](guide/1-partition.md)
 
-- [**`Installation instructions`**](guide/English/1-partition.md)
-
-- [**`Uninstall instructions`**](guide/English/edl.md)
+- [**`Uninstall instructions`**](guide/edl.md)
 
 ## Miscellaneous
+- [**`Dualboot setup`**](guide/dualboot-selection2.md)
 
-- [**`Dualboot setup`**](guide/English/dualboot-selection2.md)
+- [**`Additional materials`**](guide/materials.md)
 
-- [**`Additional materials`**](guide/English/materials.md)
+- [**`Update drivers`**](guide/update.md)
 
-- [**`Update drivers`**](guide/English/update.md)
+- [**`️Reinstall instructions`**](guide/reinstall.md)
 
-- [**`️Reinstall instructions`**](guide/English/reinstall.md)
-
-- [**`Troubleshooting`**](guide/English/troubleshooting.md)
+- [**`Troubleshooting`**](guide/troubleshooting.md)
 
 
 

@@ -9,7 +9,6 @@
 
 - [`Modified TWRP`](https://github.com/n00b69/woa-op7/releases/tag/Recovery)
 
-
 ### Opening CMD as an admin
 > Download **platform-tools** and extract the folder somewhere, then open CMD as an **administrator**.
 >
