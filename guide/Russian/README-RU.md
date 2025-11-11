@@ -1,61 +1,58 @@
 <img align="right" src="https://github.com/n00b69/woa-op7/blob/main/op7.png" width="350" alt="Windows 11 running on hotdog/guacamole">
 
-# Running Windows on the OnePlus 7 Pro / 7T Pro
+# Запуск Windows на OnePlus 7 Pro / 7T Pro
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/oneplus7woa)
 
+## Язык
+**```Русский```** | [```English```](/README.md)
 
-## Language 
-[```Русский```](/guide/Russian/README-RU.md) | **```English```**
-
-
-## ⚠️ Warning
+## ⚠️ Внимание
 > [!NOTE]
-> - We're not responsible for bricked devices, missing recovery partitions, dead oneplus factoryline ~~workers~~ cowboys, dead pmics, dead ram, dead sim cards, dead display ics, dead cpus, any oneplus shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
-> - All the files here have been contributed by other users, here you will find a guide with the working files we managed to get. In this guide we will be brushing windows on sm8750 and sewing the firewood for xiaomi 15 pro without dancing with tambourines. This is a delicate process, do it under your own risk and follow all the steps carefully.
-> - As the header of this guide suggests, **this guide is only for the _OnePlus 7 Pro 4G_ and the _OnePlus 7T Pro 4G_**. Any other devices of the OnePlus 7 series are (currently) not supported.
+> - Мы не несем ответственности за окирпиченные устройства, отсутствующие разделы recovery, умерших ~~работников~~ ковбоев производственной линии OnePlus, неработающие микросхемы PMIC, неработающую оперативную память, неработающие SIM-карты, неработающие дисплеи, неработающие процессоры, любые махинации OnePlus, взрывающиеся батареи, мертвые кошки или собаки, ядерные войны или ваше увольнение из-за того, что вы забыли снова загрузиться в Android, чтобы прозвонил будильник.
+> - Все файлы здесь предоставлены пользователями. Здесь вы найдёте руководство с рабочими файлами, которые нам удалось получить. 
+> - Как следует из заголовка данного руководства, оно предназначено **только для OnePlus 7 Pro 4G и OnePlus 7T Pro 4G.** Другие устройства серии OnePlus 7 (в настоящее время) не поддерживаются.
 
 > [!WARNING]
-> **If you're not comfortable with modding your phone or its partition table, or worried about bricking your device, it's okay to take a step back. But the process is not that hard, all you need is to read the guide and follow the instructions carefully, and you should be fine.**
+> **Если вы не уверены в модификации телефона или его таблицы разделов, или боитесь окирпичить устройство, ничего страшного — можно сделать шаг назад. Но процесс не такой уж сложный: достаточно внимательно прочитать гайд и чётко следовать инструкциям, и всё должно пройти нормально**
 
 
 > [!CAUTION]
-> **❗For everyone not using latest UEFI you MUST update to the [latest release](https://github.com/n00b69/woa-op7/releases/tag/UEFI)❗**
+> **❗Для всех, кто не использует последнюю версию UEFI, вы ДОЛЖНЫ обновиться до [последнего релиза](https://github.com/n00b69/woa-op7/releases/tag/UEFI)❗**
 >
-> **Otherwise you have a constant risk of your UFS DYING AT ANY TIME NO MATTER WHAT!**
+> **Иначе ваша UFS может _умереть_ в любой момент несмотря ни на что!**
 
 
 > [!WARNING]
-> **DO NOT USE VIDEO GUIDES!**
+> **НЕ ИСПОЛЬЗУЙТЕ ВИДЕО-ГАЙДЫ!**
 > 
-> If you do, we will not be able to help you if you mess up.
-
-## Get started
-- [**`Project status`**](guide/status.md)
-
-- [**`Installation instructions`**](guide/1-partition.md)
-
-- [**`Uninstall instructions`**](guide/edl.md)
-
-## Miscellaneous
-- [**`Dualboot setup`**](guide/dualboot-selection2.md)
-
-- [**`Additional materials`**](guide/materials.md)
-
-- [**`Update drivers`**](guide/update.md)
-
-- [**`️Reinstall instructions`**](guide/reinstall.md)
-
-- [**`Troubleshooting`**](guide/troubleshooting.md)
+> Если вы всё же решите ими воспользоваться — мы не сможем помочь, если что-то пойдёт не так.
 
 
+## Приступим
+- [**`Статус проекта`**](status-ru.md)
 
-## Maintainers
+- [**`Инструкция по установке`**](1-partition-ru.md)
+
+- [**`Инструкция по удалению`**](edl-ru.md)
+
+
+## Другое
+- [**`Настройка Dualboot`**](dualboot-selection-ru.md)
+
+- [**`Полезные инструкции и приложения`**](materials-ru.md)
+
+- [**`Обновление драйверов`**](update-ru.md)
+
+- [**`Иструкция по переустановке`**](reinstall-ru.md)
+
+- [**`Устранение проблем`**](troubleshooting-ru.md)
+
+## Авторы
 [<img alt="Project Aloha" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/118143494?s=200&v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Project-Aloha)
 [<img alt="sunflower2333" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/54024877?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/sunflower2333)
 [<img alt="NetuserPRO" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/146433756?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/NetuserPRO)
 
-
-## Contributors
+## Соавторы 
 [<img alt="adomerlee" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109386069?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/adomerlee)
 [<img alt="Morc" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/13377926?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/TheMorc)
 [<img alt="map220v" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/14368485?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/map220v)
@@ -79,6 +76,7 @@
 [<img alt="Dawid2849" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/77780707?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Dawid2849)
 [<img alt="fnm04-sh" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/91214755?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/fnm04-sh)
 [<img alt="MACINTOSH-dev" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/176975342?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/MACINTOSH-dev)
+
 
 
 

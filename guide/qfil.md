@@ -6,9 +6,9 @@
 > Rather than flashing your device into a completely refreshed state using the regular [EDL guide](edl.md), you may want to try to restore it without losing data. If this is the case, the below guide is for you.
 
 ### Prerequisites
-- [Qfil, EDL Drivers & OP7series firehose](https://github.com/n00b69/woa-op7/releases/tag/EDL)
+- [`Qfil, EDL Drivers & OP7series firehose`](https://github.com/n00b69/woa-op7/releases/tag/EDL)
 
-- OxygenOS firmware for [OnePlus 7 Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) or [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) or any other files that you may want to flash
+- `OxygenOS firmware for [OnePlus 7 Pro`](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) or [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) or any other files that you may want to flash
 
 ### Setting up Qfil
 - Open **Qfil**.

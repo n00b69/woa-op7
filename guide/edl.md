@@ -16,16 +16,16 @@
 > If you are here because you want to uninstall Windows rather than because youe phone has been bricked, make sure to back up your data first. All of your data will be lost!
 
 ### Extracting the MSM Download Tool
-- Download the **MSM Download Tool** ROM for your device (which should be in .zip format), then extract the contents of the .zip file somewhere.
+- Download the **`MSM Download Tool`** ROM for your device (which should be in .zip format), then extract the contents of the .zip file somewhere.
 
 ### Booting into EDL Mode
 > [!NOTE]
 > If you're already in EDL, you can skip this step
 
-- Open **Device Manager** on your PC.
-- With your phone turned off, hold **volume up** + **volume down** at the same time, then connect your phone to your PC and wait for a USB sound.
+- Open **`Device Manager`** on your PC.
+- With your phone turned off, hold **`volume up`** + **`volume down`** at the same time, then connect your phone to your PC and wait for a USB sound.
 - Locate **Qualcomm HS-USB QDLoader 9008** in the **Ports (COM & LPT)** category of Device Manager.
-- If the device is missing entirely, is called **QUSB_BULK_CID**, or has a ⚠️ yellow warning triangle / question mark, (or is located in any other category such as **Other devices**), you need to install EDL drivers first.
+- If the device is missing entirely, is called **QUSB_BULK_CID**, or has a ⚠️ yellow warning triangle / question mark, (or is located in any other category such as **`Other devices`**), you need to install EDL drivers first.
 - To install EDL drivers, extract the contents of **QUD.zip** somewhere, right click on **QUSB_BULK_CID**, click on **Update driver** and **Browse my computer for drivers**, then find and select the **QUD** folder.
 
 ### Flashing the stock rom
