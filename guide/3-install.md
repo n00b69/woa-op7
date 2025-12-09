@@ -35,7 +35,7 @@ diskpart
 #### Select the Windows volume of the phone
 > Use `list volume` to find it, replace `$` with the actual number of **WINONEPLUS**
 >
-> If you do not see **WINONEPLUS**, please use [these instructions](troubleshooting-ru.md#mass-storage-mode-does-not-work) for an alternative method of entering mass storage mode
+> If you do not see **WINONEPLUS**, please use [these instructions](troubleshooting.md#mass-storage-mode-does-not-work) for an alternative method of entering mass storage mode
 ```diskpart
 select volume $
 ``` 
