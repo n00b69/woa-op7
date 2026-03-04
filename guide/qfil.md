@@ -8,7 +8,7 @@
 ### Prerequisites
 - [`Qfil, EDL Drivers & OP7series firehose`](https://github.com/n00b69/woa-op7/releases/tag/EDL)
 
-- [`OxygenOS firmware for [OnePlus 7 Pro`](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) or [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) or any other files that you may want to flash
+- `OxygenOS firmware for` [OnePlus 7 Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7_Pro/Global_GM21AA/R/) or [OnePlus 7T Pro](https://onepluscommunityserver.com/list/Unbrick_Tools/OnePlus_7T_Pro/Global_HD01AA/R/) or any other files that you may want to flash
 
 ### Setting up Qfil
 - Open **Qfil**.
